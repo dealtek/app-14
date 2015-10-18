@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Independent Drivers Consortium Title</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="inc/jq/themes/theme-02.min.css" />
+<link rel="stylesheet" href="inc/jq/themes/jquery.mobile.icons.min.css" />
+
+<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+<script>
+	$(function(){
+		$( "[data-role='header'], [data-role='footer']" ).toolbar();
+		});
+    </script>
+
+<link href="mob.css" rel="stylesheet" type="text/css" />
+
+  
+</head>
+<body>
+
+
+<div data-role="header" data-position="fixed" data-theme="a">
+<!--add header -->
+</div>
+
+<!-- /header -->
+
+<section id="page01111" data-role="page">
+
+<div role="main" class="ui-content">
+<div class="content" >
+<div class="box1 center1" >
+  
+      
+<!--INSERT START -->
+
+<br>
+<!--
+
+<span class="big18"><a rel="external" class="buttonlink2 center1" href="new-client-application-form-start.html">Go Back start</a></span>
+
+<br>
+ -->
+
+<div class="widebox1"><div class="dash1"><a rel="external" class="buttonlink2" href="new-client-application-register1.html">go back</a></div> 
+
+
+</div>
+
+
+<!--
+<h1>jQuery post JSON data using .post() method</h1>
+<div>Click the button below to get response.</div> -->
+
+<!-- our form   Post JSON-->	
+<input type='button' value='SEND YOUR INFO TO IDC' id='postJson' />
+
+<!-- where the response will be displayed -->
+
+<strong>
+
+<div class="print_data_22"  id='response'></div>
+<br><br>
+
+
+<div class="print_data_22"  id='response2'></div>
+<br>
+
+
+new CLID is <div class="print_data_22"  id='Client_ID'></div>
+<br>
+
+
+
+<div class="widebox1"><div class="dash1"><a rel="external" class="buttonlink2" href="zpay-07.html">CONTINUE PAY 07 YO</a></div> </div>
+
+
+</strong>
+<script>
+$(document).ready(function(){
+
+	$('#postJson').click(function(){
+	
+		// show that something is loading
+		$('#response').html("<b>Loading response...</b>");
+		
+		/*
+		 * 'post_receiver.php' - where you will pass the form data
+		 * $(this).serialize() - to easily read form data
+		 * function(data){... - data contains the response from post_receiver.php
+		 */
+		 
+		 
+		 
+//$.get("http://filemakerbro.com/idc-data/ztestedit01.php?Client_ID="+Client_ID+"&PUC_Number="+PUC_Number, function(data, status){
+
+	 
+//$.post('zpost_receiver_me01.php', {
+
+// newsignup-01.php
+//
+//$.post('http://filemakerbro.com/idc-data/zpost_receiver_me06d.php', {
+	
+//
+$.post('http://filemakerbro.com/idc-data/new-client-application-register-newrec.php', {	
+//new-client-application-register-newrec.php
+
+//Client_ID: '45021',	 
+firstname: localStorage.getItem("firstname"),
+lastname: localStorage.getItem("lastname"),
+socialsecnum: localStorage.getItem("socialsecnum"),
+cellphone: localStorage.getItem("cellphone"),
+driverslicense: localStorage.getItem("driverslicense"),
+address1: localStorage.getItem("address1"),
+city1: localStorage.getItem("city1"),
+state1: localStorage.getItem("state1"),
+zip1: localStorage.getItem("zip1"),
+type_of_company_number: localStorage.getItem("type_of_company_number"),
+SignUp_Amt: localStorage.getItem("cl_toc_cert_fee_signup"),
+DOT_100_Annual_Fee: localStorage.getItem("cl_toc_cert_fee_renewal"),
+email: localStorage.getItem("email"),
+PUC_Number: localStorage.getItem("PUC_Number"),
+cl_emp_web_agree_contract: localStorage.getItem("cl_emp_web_agree_contract")
+
+
+/*
+
+no need - these on php
+Signup_date: '',
+date_TAXI_annual_renewexpir_certification: '',
+PUC_Number: '',
+zweb_nopay: '1'
+
+
+these
+
+'SignUp_Amt'=>$_SESSION['amount'],
+'Billing Company Name'=>$co,
+'F Name Billing'=>$_POST['firstname'],
+'L Name Billing'=>$_POST['lastname'],
+
+'Company'=>$co,
+'cl_emp::telephone'=>$_POST['cellphone'],
+'cl_emp::Notify_PhoneVoice'=>$_POST['cellphone'],
+'cl_emp::Notify_PhoneText'=>$_POST['cellphone'],
+'cl_emp::City_Taxi_Permit_No'=>'NEW',
+
+//new doc agree
+'cl_emp::web_agree_contract'=>$_POST['agree'],
+
+
+//hmmm these?
+'email_Confidential Email'=>$_POST["email"],
+//'email_Employee_List Address'=>$_POST["email"],
+'cl_emp::Notify_Email'=>$_POST['email'],
+'email_Billing Address'=>$_POST['email'],
+'client E Mail'=>$_POST['email'],
+
+//'Phone1'=>$_POST["cellphone"],
+'Phone2'=>$_POST["cellphone"],
+'Billing Phone'=>$_POST["cellphone"],
+
+//more
+
+'Signup_date'=>$_POST['datetoday'],
+'date TAXI annual renewexpir certification'=>$_POST['expdate'],
+'type_of_company_number'=>$_POST['tocnum'],
+'zweb_nopay'=>$_POST['zweb_nopay'],
+// hmmm 'password'=>$_POST['password'],
+'password'=>$_POST['driverslicense'], //hmmm
+
+//'em_printPrefs_invoice'=>$_POST["optmailinv"],
+//'z_webtmp'=>'',
+'Status'=>'WEB-HOLD',
+'z_websignup'=>'1',
+//
+'DOT_100_Annual_Fee'=>$_SESSION["renewamt"],
+//'DOT_100_enroll'=>$_SESSION["amount"],
+'Sales Person ID'=>'110',
+'sales person first'=>'Marie',
+'sales person last'=>'Torerro',
+'initials for type of payment Signup'=>'web',
+'type of initial payment'=>'credit card',
+'Kind of Company'=>'Taxi Cab',
+'ALC'=>'1',
+'em_printPrefs'=>'paper',
+'PUC Number'=>$_POST["PUC_Number"],
+'Fax'=>'818 779 1908',
+
+*/
+
+
+
+
+
+// NEED LOTS MORE SOON toc num amt etc.
+
+
+/*
+
+xxx: localStorage.getItem("xxx"),
+xxx: localStorage.getItem("xxx"),
+xxx: localStorage.getItem("xxx"),
+xxx: localStorage.getItem("xxx"),
+xxx: localStorage.getItem("xxx"),
+xxx: localStorage.getItem("xxx"),
+xxx: localStorage.getItem("xxx"),
+
+*/
+
+		}, function(data){
+			
+			// show the response
+			$('#response').html(data);
+			
+			$('#response2').html(data);
+			
+			
+			localStorage.setItem("Client_ID", data);
+			document.getElementById('Client_ID').textContent = localStorage.getItem("Client_ID");
+			
+
+			
+		}).fail(function() {
+		
+			// just in case posting your form failed
+			alert( "Posting failed." );
+			
+		});
+
+		// to prevent refreshing the whole page page
+		return false;
+
+	});
+});
+</script>
+
+
+
+
+
+
+
+
+
+<!--
+
+<br><br>
+
+ashgdgsadgjha
+
+
+
+<br><br>
+
+use this to create new fmp client
+
+<br><br> -->
+
+<form action="" method="post" name="thisform" id="thisform" >
+
+<table border="0" align="center" cellpadding="2" cellspacing="2">
+  <tr>
+    <td>
+   
+   <!-- 
+     <h1> <span class="red1"> <strong>
+	nameeeeeeeee
+     
+     </strong></span>
+     
+     <br><br>
+     
+     
+     LOTS OF PHP TO ADD BACKKKK!!!
+          
+ </h1>
+     -->
+    
+    
+    
+    </td>
+  </tr>
+  <tr>
+    <td align="left" valign="top">
+    
+  
+    
+  <!-- 33 <span id="x44999"></span> -->
+    
+    
+     <span class="red2">*</span>  <span class="label_16g">First Name:<br>
+</span><div id='thisform_firstname_errorloc' class="error_strings"></div>
+
+<!--
+x44 is 
+ <input name="x44" type="text" class="print_data_22" value="" id="x44"> -->
+
+
+      <input name="firstname" type="text" class="print_data_22" value="" id="firstname">
+      
+      </td>
+  </tr>
+  <tr>
+    <td align="left" valign="top"><span class="red2">*</span> <span class="label_16g">Last Name:<br>
+</span>
+<div id='thisform_lastname_errorloc' class="error_strings"></div>
+<input id="lastname" name="lastname" type="text" class="print_data_22" value=""></td>
+  </tr>
+  <tr>
+    <td align="left" valign="top"><span class="red2">*</span> <span class="label_16g">Social Security Number: <!--(optional) --><br>
+</span>
+
+<div id='thisform_socialsecnum_errorloc' class="error_strings"></div>
+<input name="socialsecnum" type="text" value="ss"  class="print_data_22" /> 
+
+
+</td>
+  </tr>
+  
+ 
+  
+  
+  <tr>
+    <td align="left" valign="top"><span class="red2">*</span> <span class="label_18g">Cellphone:<br>
+</span>
+<div id='thisform_cellphone_errorloc' class="error_strings"></div>
+<input id="cellphone" name="cellphone" type="text" value="" class="print_data_22"></td>
+  </tr>
+  
+  
+  
+   
+
+    
+  
+  
+<tr align="left" valign="top">
+     <td align="left"><span class="label_18g">
+       <span class="red2">*</span> Driver's License Number:<br />
+ 
+       
+       </span>
+       <div id='thisform_driverslicense_errorloc' class="error_strings"></div>
+       <span class="print_data_22">
+       
+       
+        <input id="driverslicense" name="driverslicense" type="text" value=""  class="print_data_22" /> 
+        
+ </span></td>
+  </tr>  
+
+  
+<tr align="left" valign="top">
+     <td align="left"><span class="label_18g">
+       <span class="red2">*</span> Email Address:<br /></span>
+       <div id='thisform_email_errorloc' class="error_strings"></div>
+       <span class="print_data_22">
+       <input name="email" type="text" value="em1"  class="print_data_22" />
+        
+ </span></td>
+ 
+  </tr>  
+  
+  
+  
+<tr align="left" valign="top">
+     <td align="left"><span class="label_18g">
+       <span class="red2">*</span> CA PUC Number: (optional)<br /></span>
+       <div id='thisform_email_errorloc' class="error_strings"></div>
+       <span class="print_data_22">
+       <input name="PUC_Number" type="text" value="puc num111"  class="print_data_22" />
+        
+ </span></td>
+ 
+  </tr>  
+ 
+ 
+ 
+ 
+  
+  
+  
+  
+  <tr>
+    <td>
+    
+    
+   
+    <!--HIDDEN -->
+      
+    <!--  no need now but maybe later -->
+      
+      <input name="optmailinv" type="hidden" value="" />
+      
+      <input name="password" type="hidden" value="" />
+      
+      
+  
+      
+      
+      <input name="expdate" type="hidden" value="next year" />
+      
+      
+      <input name="tocnum" type="hidden" value="toccccc" />
+      
+      
+    
+      
+      <!-- don't need certfeesignup? YES WE DO FOR CARD-->
+      
+      <input name="certfeesignup" type="hidden" value="amtttt" />
+      
+      <input name="datetoday" type="hidden" value="todyyyyyy" />
+      
+      <input name="zweb_nopay" type="hidden" value="1" />  
+     
+  <input name="password" type="hidden" value="111">
+      
+</td>
+  </tr>
+  
+  
+  
+  
+<tr align="left" valign="top">
+<td align="center">
+
+
+<span class="print_data_20"><strong> Billing Address</strong> <span class="red2">* = Required</span></span></td>
+</tr>
+<tr align="left" valign="top">
+<td align="left"></td>
+</tr>
+
+
+
+
+<tr align="left" valign="top">
+<td align="left"><span class="label_16g"><span class="red2">*</span> Address: (ID: iddddddddd)<br />
+
+
+</span>
+<div id='thisform_address1_errorloc' class="error_strings"></div>
+<span class="print_data_22">
+<input name="address1" type="text" class="print_data_22" value=""  />
+</span></td>
+</tr>
+<tr align="left" valign="top">
+<td align="left"><span class="label_16g"><span class="red2">* </span>City:<br />
+</span>
+<div id='thisform_city1_errorloc' class="error_strings"></div>
+<span class="print_data_22">
+<input name="city1" type="text" value="" class="print_data_22" />
+</span></td>
+</tr>
+<tr align="left" valign="top">
+<td align="left"><span class="label_16g"><span class="red2">* </span>State:<br />
+<!--<input name="state1" type="text" value="CA" size="5" /> 
+     --> 
+</span>
+<div id='thisform_state1_errorloc' class="error_strings"></div>
+
+<!-- fix pre choice --> 
+
+<span class="print_data_22">
+<select name="state1" class="print_data_22">
+<option value="AL">Alabama</option>
+<option value="AK">Alaska</option>
+<option value="AZ">Arizona</option>
+<option value="AR">Arkansas</option>
+<OPTION SELECTED VALUE="CA">California</option>
+<option value="CO">Colorado</option>
+<option value="CT">Connecticut</option>
+<option value="DE">Delaware</option>
+<option value="DC">District of Columbia</option>
+<option value="FL">Florida</option>
+<option value="GA">Georgia</option>
+<option value="HI">Hawaii</option>
+<option value="ID">Idaho</option>
+<option value="IL">Illinois</option>
+<option value="IN">Indiana</option>
+<option value="IA">Iowa</option>
+<option value="KS">Kansas</option>
+<option value="KY">Kentucky</option>
+<option value="LA">Louisiana</option>
+<option value="ME">Maine</option>
+<option value="MD">Maryland</option>
+<option value="MA">Massachusetts</option>
+<option value="MI">Michigan</option>
+<option value="MN">Minnesota</option>
+<option value="MS">Mississippi</option>
+<option value="MO">Missouri</option>
+<option value="MT">Montana</option>
+<option value="NE">Nebraska</option>
+<option value="NV">Nevada</option>
+<option value="NH">New Hampshire</option>
+<option value="NJ">New Jersey</option>
+<option value="NM">New Mexico</option>
+<option value="NY">New York</option>
+<option value="NC">North Carolina</option>
+<option value="ND">North Dakota</option>
+<option value="OH">Ohio</option>
+<option value="OK">Oklahoma</option>
+<option value="OR">Oregon</option>
+<option value="PA">Pennsylvania</option>
+<option value="RI">Rhode Island</option>
+<option value="SC">South Carolina</option>
+<option value="SD">South Dakota</option>
+<option value="TN">Tennessee</option>
+<option value="TX">Texas</option>
+<option value="UT">Utah</option>
+<option value="VT">Vermont</option>
+<option value="VA">Virginia</option>
+<option value="WA">Washington</option>
+<option value="WV">West Virginia</option>
+<option value="WI">Wisconsin</option>
+<option value="WY">Wyoming</option>
+<option value="AA">Armed Forces Americas</option>
+<option value="AE">Armed Forces Europe</option>
+<option value="AP">Armed Forces Pacific
+</SELECT>
+</select>
+</span></td>
+</tr>
+<tr align="left" valign="top">
+<td align="left"><span class="label_16g"><span class="red2">* </span>Zip:<br />
+</span>
+<div id='thisform_zip1_errorloc' class="error_strings"></div>
+<span class="print_data_22">
+<input name="zip1" type="text" value=""  class="print_data_22" />
+</span></td>
+</tr>
+  
+  
+  
+  
+  <tr>
+    <td align="left" valign="top">
+      
+<!--      <input name="new_submit" type="submit" class="buttonform2_24" value="- Continue -" />   
+ -->      
+      
+<!--
+<input type="button" class="buttonform2_24" name="submit" value= " - Continue CREATE NEW REC - " onClick="testResults(this.form)" />
+
+ -->
+      
+      
+      
+      
+      
+       </td>
+    </tr>
+  
+  
+</table>
+
+
+</form>
+
+<!--
+
+document.thisform.address1.value=localStorage.getItem("address1");
+document.thisform.city1.value=localStorage.getItem("city1");
+document.thisform.state1.value=localStorage.getItem("state1");
+document.thisform.zip1.value=localStorage.getItem("zip1");
+
+
+
+
+document.thisform.firstname.value=localStorage.getItem("firstname");
+document.thisform.lastname.value=localStorage.getItem("lastname");
+document.thisform.socialsecnum.value=localStorage.getItem("socialsecnum");
+document.thisform.cellphone.value=localStorage.getItem("cellphone");
+document.thisform.driverslicense.value=localStorage.getItem("driverslicense");
+ -->
+
+
+<!--
+<br><br><br><br><br><br><br>
+
+frbgsdifg ydsf hed kajh dskj jka s
+
+
+<br><br>
+
+ -->
+
+<!--
+
+<br><br>
+<div class="widebox1"><div class="dash1"><a rel="external" class="buttonlink2" href="aaa.html">aaa</a></div> </div><br />
+<br />
+
+
+ -->
+
+
+
+
+<script>
+
+
+document.thisform.firstname.value=localStorage.getItem("firstname");
+document.thisform.lastname.value=localStorage.getItem("lastname");
+
+
+
+document.thisform.socialsecnum.value=localStorage.getItem("socialsecnum");
+
+
+document.thisform.cellphone.value=localStorage.getItem("cellphone");
+document.thisform.driverslicense.value=localStorage.getItem("driverslicense");
+
+document.thisform.address1.value=localStorage.getItem("address1");
+document.thisform.city1.value=localStorage.getItem("city1");
+document.thisform.state1.value=localStorage.getItem("state1");
+document.thisform.zip1.value=localStorage.getItem("zip1");
+/*
+*/
+
+
+
+<!--
+ -->
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--INSERT END -->
+
+</div><!-- end .box -->
+</div><!-- end .content -->
+</div><!-- /ui-content -->
+  
+</section><!-- /page -->
+
+<footer data-role="footer" class="ui-barNAH" data-position="fixed" data-theme="a">
+<div class="ui-grid-c boxblue">
+<!--add footer -->
+</div>
+</footer>
+
+<!-- /footer -->
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+
+
+
+
+
+<script>
+
+function testResults (form) {
+    var Client_ID  = form.Client_ID.value;
+	var webpass = form.webpass.value;
+   // alert ("You typed: " + Client_ID +" " +webpass);
+	
+	
+	$.get("http://filemakerbro.com/idc-data/login-all.php?Client_ID="+Client_ID+"&webpass="+webpass, function(data, status){
+			//$.get("https://idcapp.com/appjs/a2/clientget-11.php", function(data, status){	
+
+// alert("Data: " + data + "\nStatus: " + status);
+console.log ('data', data);
+output = "";
+
+$.each(data, function(key, value) {
+console. log ('item', key, value);
+
+
+//output += "<li><a href=\"#\">" + value.Client_ID;  
+//output += " " + value.Contact_First + " " + value.Contact_Last + "</a></li>";
+
+localStorage.setItem("xxx", value.xxx);
+localStorage.setItem("xxx", value.xxx);
+
+document.getElementById('xxx').innerHTML = value.xxx;
+		
+				
+});       
+            //$('#list').html( output );
+            //$('#list').listview( "refresh" );
+	//window.location.replace("http://www.mydomain.com/new-page.html");
+		
+//after loadup go to cl.......
+//window.location.replace("client-contact-info.html");
+		
+		//
+		window.location.replace("dashboard.html");
+		
+	});
+		
+}
+</script>
+
+
+
+</body>
+</html>

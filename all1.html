@@ -1,0 +1,35 @@
+<script>
+
+
+
+$(document).ready(function(){
+		
+document.getElementById('Contact_First').innerHTML = localStorage.getItem("Contact_First");
+document.getElementById('Contact_Last').innerHTML = localStorage.getItem("Contact_Last");
+document.getElementById('Client_ID').innerHTML = localStorage.getItem("Client_ID");
+document.getElementById('Company').innerHTML = localStorage.getItem("Company");	
+document.getElementById('Phone1').innerHTML = localStorage.getItem("Phone1");
+document.getElementById('Phone2').innerHTML = localStorage.getItem("Phone2");
+document.getElementById('Fax').innerHTML = localStorage.getItem("Fax");
+document.getElementById('Address').innerHTML = localStorage.getItem("Address");
+document.getElementById('City').innerHTML = localStorage.getItem("City");
+document.getElementById('State').innerHTML = localStorage.getItem("State");
+document.getElementById('Zip').innerHTML = localStorage.getItem("Zip");
+document.getElementById('Billing_Company_Name').innerHTML = localStorage.getItem("Billing_Company_Name");
+document.getElementById('F_Name_Billing').innerHTML = localStorage.getItem("F_Name_Billing");
+document.getElementById('L_Name_Billing').innerHTML = localStorage.getItem("L_Name_Billing");
+document.getElementById('Billing_Address').innerHTML = localStorage.getItem("Billing_Address");
+document.getElementById('Billing_City').innerHTML = localStorage.getItem("Billing_City");
+document.getElementById('Billing_State').innerHTML = localStorage.getItem("Billing_State");
+document.getElementById('Billing_Zip').innerHTML = localStorage.getItem("Billing_Zip");
+document.getElementById('Billing_Phone').innerHTML = localStorage.getItem("Billing_Phone");
+document.getElementById('Billing_Fax').innerHTML = localStorage.getItem("Billing_Fax");
+
+document.getElementById('cl_emp_First').innerHTML = localStorage.getItem("cl_emp_First");
+document.getElementById('cl_emp_Last').innerHTML = localStorage.getItem("cl_emp_Last");
+
+//$('#list').html( output );
+$('#list').listview( "refresh" );
+	
+});
+</script>

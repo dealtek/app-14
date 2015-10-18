@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+
+
+ <script src="phonegap.js" type="text/javascript" charset="utf-8"></script>
+        <script src="js/jquery-1.10.2.min.js" ></script>        
+        
+        <script>
+
+            function onBackKeyDown() {
+                'use strict';
+                
+                var frame = window.frames[0].window;
+
+                if(frame.bCurrentLocationIsHome == true) {
+                    navigator.app.exitApp();
+                } else {
+                    frame.location.reload();
+                }
+                return false;
+            }
+            var onDeviceReady = function() {
+                'use strict';
+                
+                setDeviceInfo();
+                document.addEventListener("backbutton", onBackKeyDown, false);
+            }
+
+            function onLoad() {
+                'use strict';
+
+                if (typeof navigator.device == 'undefined' && window.location.host != '127.0.0.1'){
+                    document.addEventListener("deviceready", onDeviceReady, false);
+                } else {
+                    onDeviceReady();
+                }  
+            }
+
+            function setDeviceInfo() {
+                pgDeviceInfo = '';
+                if (window.location.host != '127.0.0.1'){
+                    pgDeviceInfo += '<p><b>device.name: </b>' + device.name + '</p>';
+                    pgDeviceInfo += '<p><b>device.model: </b>' + device.model + '</p>';
+                    pgDeviceInfo += '<p><b>device.cordova: </b>' + device.cordova + '</p>';
+                    pgDeviceInfo += '<p><b>device.phonegap: </b>' + device.phonegap + '</p>';
+                    pgDeviceInfo += '<p><b>device.platform: </b>' + device.platform + '</p>';
+                    pgDeviceInfo += '<p><b>device.uuid: </b>' + device.uuid + '</p>';
+                    pgDeviceInfo += '<p><b>device.version: </b>' + device.version + '</p>';
+                } else {
+                    pgDeviceInfo += '<p><i>no data - not native app!! </i></p>';
+                }
+                var frame = window.frames[0].window;
+                frame.pgDeviceInfo = pgDeviceInfo;
+            }
+
+        </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<title>Independent Drivers Consortium client local store</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+
+<link rel="stylesheet" href="inc/jq/themes/theme-02.min.css" />
+<link rel="stylesheet" href="inc/jq/themes/jquery.mobile.icons.min.css" />
+
+<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+<script>
+	$(function(){
+		$( "[data-role='header'], [data-role='footer']" ).toolbar();
+		});
+    </script>
+
+<link href="mob.css" rel="stylesheet" type="text/css" />
+
+  
+</head>
+<body>
+
+
+<div data-role="header" data-position="fixed" data-theme="a">
+<!--add header -->
+</div>
+
+<!-- /header -->
+
+<section id="page01111" data-role="page">
+
+<div role="main" class="ui-content">
+<div class="content" >
+<div class="box1 center1" >
+  
+      
+<!--INSERT START -->
+
+
+
+
+
+
+<script>
+$(document).ready(function(){
+    $("button").click(function(){
+        //$.get("http://www.inbox.fm/accounts/nortonmedical/api/sandbox/test1.php", function(data, status){
+			//$.get("nm-03.php", function(data, status){
+				
+			//https://idcapp.com/appjs/a2/client.html	
+				
+//https://idcapp.com/idc-data/clientget-11.php
+
+https://idcapp.com/idc-data/clientget-11.php				
+				
+$.get("http://filemakerbro.com/idc-data/clientget-11.php", function(data, status){
+			//$.get("https://idcapp.com/appjs/a2/clientget-11.php", function(data, status){	
+				
+            // alert("Data: " + data + "\nStatus: " + status);
+            console.log ('data', data);
+            output = "";
+            
+            $.each(data, function(key, value) {
+            	console. log ('item', key, value);
+    			output += "<li><a href=\"#\">" + value.Client_ID;  
+    			output += " " + value.Contact_First + " " + value.Contact_Last + "</a></li>";
+				
+				localStorage.setItem("fn", value.Contact_First);
+				localStorage.setItem("ln", value.Contact_Last);
+				localStorage.setItem("clid", value.Client_ID);
+				localStorage.setItem("co", value.Company);
+				localStorage.setItem("Phone1", value.Phone1);
+				localStorage.setItem("Phone2", value.Phone2);
+				localStorage.setItem("Fax", value.Fax);
+				localStorage.setItem("Address", value.Address);
+				localStorage.setItem("City", value.City);
+				localStorage.setItem("State", value.State);
+				localStorage.setItem("Zip", value.Zip);
+				localStorage.setItem("Billing_Company_Name", value.Billing_Company_Name);
+				localStorage.setItem("F_Name_Billing", value.F_Name_Billing);
+				localStorage.setItem("L_Name_Billing", value.L_Name_Billing);
+				localStorage.setItem("Billing_Address", value.Billing_Address);
+				localStorage.setItem("Billing_City", value.Billing_City);
+				localStorage.setItem("Billing_State", value.State);
+				localStorage.setItem("Billing_Zip", value.Billing_Zip);
+				localStorage.setItem("Billing_Phone", value.Billing_Phone);
+				localStorage.setItem("Billing_Fax", value.Billing_Fax);
+
+				document.getElementById('fn').innerHTML = value.Contact_First;
+				document.getElementById('ln').innerHTML = value.Contact_Last;
+				document.getElementById('clid').innerHTML = value.Client_ID;
+				document.getElementById('co').innerHTML = value.Company;
+		document.getElementById('Phone1').innerHTML = value.Phone1;
+		document.getElementById('Phone2').innerHTML = value.Phone2;
+		document.getElementById('Fax').innerHTML = value.Fax;
+		document.getElementById('Address').innerHTML = value.Address;
+		document.getElementById('City').innerHTML = value.City;
+		document.getElementById('State').innerHTML = value.State;
+		document.getElementById('Zip').innerHTML = value.Zip;
+		document.getElementById('Billing_Company_Name').innerHTML = value.Billing_Company_Name;
+		document.getElementById('F_Name_Billing').innerHTML = value.F_Name_Billing;
+		document.getElementById('L_Name_Billing').innerHTML = value.L_Name_Billing;
+		document.getElementById('Billing_Address').innerHTML = value.Billing_Address;
+		document.getElementById('Billing_City').innerHTML = value.Billing_City;
+		document.getElementById('Billing_State').innerHTML = value.Billing_State;
+		document.getElementById('Billing_Zip').innerHTML = value.Billing_Zip;
+		document.getElementById('Billing_Phone').innerHTML = value.Billing_Phone;
+		document.getElementById('Billing_Fax').innerHTML = value.Billing_Fax;
+		
+				
+			});       
+            $('#list').html( output );
+            //$('#list').listview( "refresh" );
+        });
+    });
+});
+</script>
+
+
+<table align="center" width="315" border="0">
+  <tr>
+    <td align="center" valign="top">
+      <img src="pics/appbanner-320x60-main.png" width="315" height="60" align="middle" />
+    </td>
+  </tr>
+  <tr>
+    <td valign="TOP" background="pics/bk2.jpg">
+      
+     
+      <table width="100%" align="LEFT" border="0" cellpadding="2" cellspacing="2"  background="../pics/stripes_teal_bkgrnd.gif">
+        <tr>
+          <td width="100%" height="40" align="center" valign="middle" bgcolor="#FFFFFF" class="print_data_16"><!--<strong>CLIENT INFO</strong> -->
+          
+          
+          <div data-role="footer">
+          <button class="print_data_20_b">Get Contact Info</button>
+<br />
+        (button just for testing)
+        
+        <br>
+        
+        this is localstore
+        
+     <!-- <span class="print_data_22">   sssss
+</span> -->
+	</div>
+    </td>
+        </tr>
+        
+        <tr>
+          <td height="40" align="center" valign="middle" bgcolor="#FFFFFF" class="print_data_16">
+            
+            
+            
+           <div class="widebox1"><div class="dash1"><a rel="external" class="buttonlink2" href="clientview-01.html">CL VIEW</a></div> </div><br />
+<br />
+ 
+            
+  <div class="widebox1"><div class="dash1"><a rel="external" class="buttonlink2" href="zsee-01.html">SEE 01 test</a></div> </div><br /><br />
+            <strong>        
+  <div class="widebox1"><div class="dash1"><a rel="external" class="buttonlink2" href="index.html">RETURN to Main Page</a></div> </div>     
+          </strong></td>
+        </tr>
+       
+        <tr>
+          <td valign="TOP" align="LEFT">
+          <span class="print_data_16_gray">Company:
+</span>
+          
+          
+         </td>
+        </tr>
+        
+        
+<tr>
+<td align="LEFT" valign="TOP">
+<div align="left" class="print_data_22">
+<span id="co"></span>
+</div>
+</td>
+        </tr>
+        
+        
+        
+<tr>
+<td align="LEFT" valign="TOP">
+<span class="print_data_16_gray">
+Client ID#:
+</span>
+
+</td>
+</tr>
+        
+        
+        <tr>
+<td align="LEFT" valign="TOP">
+<span class="print_data_20_b"><strong><span id="clid"></span></strong>   
+</td>
+</tr>
+
+       
+<tr>
+<td align="LEFT" valign="TOP">
+<span class="print_data_16_gray">
+Name:
+</span>
+
+</td>
+</tr>
+
+<tr>
+<td align="LEFT" valign="TOP">
+
+</td>
+</tr>
+
+
+<tr>
+          <td valign="TOP" align="LEFT">
+            
+           
+            
+          <span class="style8"><strong>
+          <span id="fn"></span> <span id="ln"></span>
+          
+          </strong>  
+
+
+
+ 
+
+
+
+
+
+
+       
+          
+          </strong></span><strong><!-- Status: <span class="style8"><?php echo $client_row->getField('Status'); ?></span> --></strong></td>
+        </tr>
+        
+       
+
+<tr>
+<td align="LEFT" valign="TOP">
+<span class="print_data_16_gray">
+Phones:
+</span>
+
+</td>
+</tr>
+
+
+        <tr>
+<td align="LEFT" valign="TOP">
+
+<div align="left" class="print_data_20_b">
+
+
+
+
+
+<span id="Phone1"></span>
+
+<br />
+<span id="Phone2"></span>
+
+
+</div>
+
+</td>
+</tr>
+
+
+
+
+<tr>
+<td align="LEFT" valign="TOP">
+<span class="print_data_16_gray">
+Fax:
+</span>
+
+</td>
+</tr>
+
+<tr>
+<td align="LEFT" valign="TOP">
+<span class="print_data_20_b">
+<span id="Fax"></span>
+</span>
+
+</td>
+</tr>
+
+
+
+
+<tr>
+<td align="LEFT" valign="TOP">
+<span class="print_data_16_gray">
+Address:
+</span>
+
+</td>
+</tr>
+
+<tr>
+<td align="LEFT" valign="TOP">
+<span class="print_data_20_b">
+<span id="Address"></span>
+</span>
+
+</td>
+</tr>
+
+
+
+<!--
+<tr>
+<td align="LEFT" valign="TOP">
+<span class="print_data_16_gray">
+xxx:
+</span>
+
+</td>
+</tr>
+ -->
+<tr>
+<td align="LEFT" valign="TOP">
+<span class="print_data_20_b">
+
+
+<span id="City"></span>, <span id="State"></span> <span id="Zip"></span>
+
+
+
+  
+</span>
+
+</td>
+</tr>
+
+
+
+
+ <tr>
+          <td height="40" align="center" valign="middle" bgcolor="#FFFFFF" class="print_data_16"><strong>Billing Info</strong></td>
+        </tr>
+        
+        
+<tr>
+<td align="LEFT" valign="TOP">
+<span class="print_data_16_gray">
+
+
+
+Billing Co. Name:
+</span>
+
+</td>
+</tr>
+
+<tr>
+<td align="LEFT" valign="TOP">
+<span class="print_data_20_b">
+<span id="Billing_Company_Name"></span>
+
+     
+</span>
+
+</td>
+</tr>
+
+<tr>
+<td align="LEFT" valign="TOP">
+<span class="print_data_16_gray">
+Billing Contact:
+</span>
+
+</td>
+</tr>
+
+<tr>
+<td align="LEFT" valign="TOP">
+<span class="print_data_20_b">
+
+
+<span id="F_Name_Billing"></span> <span id="L_Name_Billing"></span>
+
+</span>
+
+</td>
+</tr>
+
+<!--
+<tr>
+<td align="LEFT" valign="TOP">
+<span class="print_data_16_gray">
+xxx:
+</span>
+
+</td>
+</tr> -->
+
+<tr>
+<td align="LEFT" valign="TOP">
+
+<br /><br />
+<span class="print_data_20_b">
+
+<span id="Billing_Address"></span>
+</span>
+
+</td>
+</tr>
+
+<!--
+<tr>
+<td align="LEFT" valign="TOP">
+<span class="print_data_16_gray">
+City/St/Zip:
+</span>
+
+</td>
+</tr>
+ -->
+<tr>
+<td align="LEFT" valign="TOP">
+<span class="print_data_20_b">
+
+<span id="Billing_City"></span>, <span id="Billing_State"></span> <span id="Billing_Zip"></span>
+
+
+
+
+</span>
+
+</td>
+</tr>
+
+
+<tr>
+<td align="LEFT" valign="TOP">
+<span class="print_data_16_gray">
+Billing Phone:
+</span>
+
+</td>
+</tr>
+
+<tr>
+<td align="LEFT" valign="TOP">
+<span class="print_data_20_b">
+
+<span id="Billing_Phone"></span>
+
+
+
+ 
+</span>
+
+</td>
+</tr>
+
+
+<tr>
+<td align="LEFT" valign="TOP">
+<span class="print_data_16_gray">
+Billing Fax:
+</span>
+
+</td>
+</tr>
+
+<tr>
+<td align="LEFT" valign="TOP">
+<span class="print_data_20_b">
+<span id="Billing_Fax"></span>
+ 
+</span>
+
+</td>
+</tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <tr>
+          <td height="40" align="center" valign="middle" bgcolor="#FFFFFF" class="print_data_16"><strong>
+          
+          Email Addresses
+          
+          </strong></td>
+        </tr>
+
+
+<tr>
+<td align="LEFT" valign="TOP">
+<span class="print_data_16_gray">
+
+Client Email:
+
+
+
+
+</span>
+
+</td>
+</tr>
+
+<tr>
+<td align="LEFT" valign="TOP">
+<span class="print_data_20_b">
+<span id="fn"></span>
+</span>
+
+</td>
+</tr>
+
+
+<tr>
+<td align="LEFT" valign="TOP">
+<span class="print_data_16_gray">
+
+Confidential Email:
+
+</span>
+
+</td>
+</tr>
+
+<tr>
+<td align="LEFT" valign="TOP">
+<span class="print_data_20_b">
+
+
+<span id="fn"></span>
+</span>
+
+</td>
+</tr>
+
+
+
+<tr>
+<td align="LEFT" valign="TOP">
+<span class="print_data_16_gray">
+
+
+
+
+Billing Email:
+
+
+</span>
+
+<span class="print_data_20_b">
+
+
+
+
+
+
+
+</span></td>
+</tr>
+
+<tr>
+<td align="LEFT" valign="TOP">
+<span class="print_data_20_b">
+
+
+<span id="fn"></span>
+
+
+</span>
+
+</td>
+</tr>
+
+
+<tr>
+<td align="LEFT" valign="TOP">
+<span class="print_data_16_gray">
+
+
+Certification Email:
+
+
+
+</span>
+
+</td>
+</tr>
+
+<tr>
+<td align="LEFT" valign="TOP">
+<span class="print_data_20_b">
+<span id="fn"></span>
+
+</span>
+
+</td>
+</tr>
+
+
+<tr>
+<td align="LEFT" valign="TOP">
+<span class="print_data_16_gray">
+
+Emp. List Email:
+
+
+</span>
+
+</td>
+</tr>
+
+<tr>
+<td align="LEFT" valign="TOP">
+<span class="print_data_20_b">
+<span id="fn"></span>
+ 
+</span>
+
+</td>
+</tr>
+
+
+<tr>
+<td align="LEFT" valign="TOP">
+<span class="print_data_16_gray">
+
+
+Randoms Email:
+
+
+</span>
+
+</td>
+</tr>
+
+<tr>
+<td align="LEFT" valign="TOP">
+<span class="print_data_20_b">
+
+<span id="fn"></span>
+
+
+
+</span>
+
+</td>
+</tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+<td align="LEFT" valign="TOP">
+<span class="print_data_16_gray">
+
+
+Results NEGATIVE Email: 
+</span>
+
+</td>
+</tr>
+
+<tr>
+<td align="LEFT" valign="TOP">
+<span class="print_data_20_b">
+
+<span id="fn"></span>
+
+
+
+</span>
+
+</td>
+</tr>
+
+
+<tr>
+<td align="LEFT" valign="TOP">
+<span class="print_data_16_gray">
+
+
+
+Results POSITIVE Email:
+
+
+
+</span>
+
+</td>
+</tr>
+
+<tr>
+<td align="LEFT" valign="TOP">
+<span class="print_data_20_b">
+
+<span id="fn"></span>
+
+</span>
+
+</td>
+</tr>
+
+
+<tr>
+<td align="LEFT" valign="TOP">
+<span class="print_data_16_gray">
+
+
+Agency Email:
+
+
+</span>
+
+</td>
+</tr>
+
+<tr>
+<td align="LEFT" valign="TOP">
+<span class="print_data_20_b">
+<span id="fn"></span>
+</span>
+
+</td>
+</tr>
+
+
+ <tr>
+          <td height="40" align="center" valign="middle" bgcolor="#FFFFFF" class="print_data_16"><strong>Testing Percentages</strong></td>
+        </tr>
+
+
+<tr>
+<td align="LEFT" valign="TOP">
+<span class="print_data_16_gray">
+
+
+
+Random Alcohol Percent:
+
+
+</span>
+
+</td>
+</tr>
+
+<tr>
+<td align="LEFT" valign="TOP">
+<span class="print_data_20_b">
+<span id="fn"></span> %   
+</span>
+
+</td>
+</tr>
+
+
+<tr>
+<td align="LEFT" valign="TOP">
+<span class="print_data_16_gray">
+Random Drug Percent::</span>
+
+</td>
+</tr>
+
+<tr>
+<td align="LEFT" valign="TOP">
+<span class="print_data_20_b">
+<span id="fn"></span> %
+</span>
+
+</td>
+</tr>
+<tr>
+  <td align="LEFT" valign="TOP">&nbsp;</td>
+</tr>
+<tr>
+  <td align="LEFT" valign="TOP">&nbsp;</td>
+</tr>
+
+  
+        
+        
+    </table></td>
+  </tr>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+<!--INSERT END -->
+
+</div><!-- end .box -->
+</div><!-- end .content -->
+</div><!-- /ui-content -->
+  
+</section><!-- /page -->
+
+<footer data-role="footer" class="ui-barNAH" data-position="fixed" data-theme="a">
+<div class="ui-grid-c boxblue">
+<!--add footer -->
+</div>
+</footer>
+
+<!-- /footer -->
+
+</body>
+</html>

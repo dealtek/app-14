@@ -1,0 +1,157 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+
+<br><br>
+
+<a href="index.html">Index</a>
+
+
+
+YO RESULT IS:
+
+
+<span id="done1"></span>
+<br><br>
+
+puc<br>
+<span id="PUC_Number"></span>
+<br><br>
+
+
+
+
+
+    
+<form action=""  method="GET">
+<!--
+<h2>Enter your information:</h2>
+
+align="center" 
+ --> 
+
+<div  class="box1 center1">
+
+<!--cookie start
+
+
+ -->
+ 
+
+
+<a href="index.html">Index</a>
+
+<br>
+
+YO RESULT IS:
+
+
+<span id="done1"></span>
+<br><br>
+
+
+Enter Your Client ID*: <!--(tmp login 45021 pass 123456) --><br> 
+<input name="Client_ID" type="text" class="print_data_22" value="45021" size="15" class="print_data_22" />
+
+
+<br>
+
+<p>PUC_Number:<br>
+
+
+<input name="PUC_Number" type="text" class="print_data_22" value="155" size="15" class="print_data_22" />
+</p>
+
+
+
+<hr />
+
+
+
+<input type="button" class="buttonform2_24" name="submit" value= " - Login - " onClick="testResults(this.form)" />
+
+
+
+
+
+<input type="hidden" name="trylogin" value= "true" >
+</form>
+
+
+
+
+
+<script>
+
+function testResults (form) {
+    var Client_ID  = form.Client_ID.value;
+	//var webpass = form.webpass.value;
+	var PUC_Number = form.PUC_Number.value;
+   // alert ("You typed: " + Client_ID +" " +webpass);
+	
+
+
+
+
+
+	
+localStorage.setItem("done1", "YO12221");
+
+
+localStorage.setItem("PUC_Number", PUC_Number);
+
+
+document.getElementById('done1').textContent = localStorage.getItem("done1");
+
+//document.getElementById('PUC_Number').textContent = localStorage.getItem("PUC_Number");
+
+document.getElementById('PUC_Number').textContent = form.PUC_Number.value;
+	
+		
+//window.location.replace("dashboard.html");
+		
+			
+	
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+
+
+
+
+
+
+
+/*
+
+
+*/
+</script>
+
+</body>
+</html>

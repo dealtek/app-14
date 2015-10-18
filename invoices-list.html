@@ -1,0 +1,374 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Independent Driver Consortium -  Invoices</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="inc/jq/themes/theme-02.min.css" />
+<link rel="stylesheet" href="inc/jq/themes/jquery.mobile.icons.min.css" />
+<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<script>
+	$(function(){
+		$( "[data-role='header'], [data-role='footer']" ).toolbar();
+		});
+    </script>
+<style type="text/css">
+img.center {
+	display: block;
+	margin-left: auto;
+	margin-right: auto
+}
+.box1 {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #06C;
+}
+</style>
+<style type="text/css">
+<!--
+.center1 {
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+	text-align: center;
+}
+.box1 {
+	background-image: url(pics/stripes_teal_bkgrnd.gif);
+	height: 100%;
+	width: 100%;
+}
+.box2 {
+	background-image: url(pics/stripes_teal_bkgrnd.gif);
+}
+.bighead1 {
+	color: #000066;
+	font-weight: bold;
+	font-size: 18px;
+}
+.bigfont1 {
+	font-weight: bold;
+	font-size: 18px;
+}
+.bigfont2 {
+	font-weight: bold;
+	font-size: 18px;
+	text-align: center;
+	vertical-align: middle;
+	display: block;
+	height: 40px;
+	line-height: 40px;
+}
+.fgreen {
+	color: #090;
+}
+.fblue {
+	color: #03F;
+}
+-->
+</style>
+<style type="text/css">
+img.center {
+	display: block;
+	margin-left: auto;
+	margin-right: auto
+}
+.box1 {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #06C;
+}
+</style>
+<style type="text/css">
+<!--
+body, td, th {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+.style6 {
+	font-size: 18px;
+	font-weight: bold;
+	color: #000033;
+}
+.style7 {
+	color: #330000
+}
+.style8 {
+	font-size: 14px;
+	font-weight: bold;
+}
+.style9 {
+	font-size: 14px;
+	font-weight: bold;
+	color: #000033;
+}
+-->
+</style>
+<style type="text/css">
+<!--
+.style11 {
+	font-size: 12px
+}
+-->
+</style>
+
+
+<style type="text/css">
+.thinbox {
+	border: thin solid #CCC;
+	/*margin: 4px;*/
+	padding: 4px;
+	width: 33px;
+}
+</style>
+
+
+<link href="mob.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+
+<div data-role="header" data-position="fixed" data-theme="a">
+
+
+<div class="box1 center1 boxblue" >
+<a href="dashboard.html" rel="external"><img src="pics/appbanner-320x60-home1.png" width="320" height="61" class="center" ></a>
+</div>
+
+<!--<h1>Page head Title</h1> -->
+</div><!-- /header -->
+
+
+
+<section id="page01" data-role="page"> 
+
+<!--	
+ <div class="box1 center1" >this box fill all<br><br>
+<br>
+</div> -->
+
+<div role="main" class="ui-content">
+<div class="content" >
+<div class="box1 center1" > 
+
+<!--INSERT START -->
+
+<div align="left">
+
+
+
+
+
+ 
+
+
+<p> 
+<!--
+<a class="buttonlink2" href="dashboard.php" rel="external">CANCEL-RETURN to Main Page</a>
+<div class="vsp20"></div>
+
+
+ -->
+ 
+ 
+<a class="buttonlink2" href="client-paymethods.php" rel="external">SOON Add or Update Credit Cards</a> 
+
+
+<br>
+
+
+<a class="buttonlink2" href="zpay-08-payinvoice.html" rel="external">payinvoice new iframe</a> 
+
+</p>
+
+
+<table border="0" align="center" >
+<tr>
+<td>
+
+
+
+<!--
+
+cllllllllll is 
+<span id="Client_ID"></span><br>
+
+
+ -->
+
+
+
+
+
+</td>
+</tr>
+<tr>
+<td><span class="style8">Invoices: </span> 
+
+
+</td>
+</tr>
+</table>
+<br>
+</p>
+</div>
+
+
+
+
+
+<br>
+
+
+<script>
+
+//function testResults (form) {
+    //var Client_ID  = form.Client_ID.value;
+	//Client_ID
+	
+	var Client_ID  = localStorage.getItem("Client_ID");
+	
+//document.getElementById('Client_ID').textContent = localStorage.getItem("Client_ID");
+	//var webpass = form.webpass.value;
+   // alert ("You typed: " + Client_ID +" " +webpass);
+   
+   //var zip = form.zip.value;
+   //var zip = '91';
+
+
+	$.get("http://filemakerbro.com/idc-data/invoices-list.php?Client_ID="+Client_ID, function(data, status){
+		
+//$.get("http://filemakerbro.com/idc-data/collection-sites1.php?zip="+zip, function(data, status){
+				
+		
+		
+			//$.get("https://idcapp.com/appjs/a2/clientget-11.php", function(data, status){	
+
+// alert("Data: " + data + "\nStatus: " + status);
+console.log ('data', data);
+output = "";
+
+
+//<span class='thinbox'></span>
+
+$.each(data, function(key, value) {
+            	console. log ('item', key, value);
+    			output += "<li>" + 
+				"<span class='thinbox'>" +
+				value.Invoice_ID +
+				"</span> <strong><span class='thinbox'>" + value.Invoice_Date
+				+ "</span></strong><span class='thinbox'>$ " + value.Invoice_Total
+				
++
+				 
+"</span>" 
+
+
++
+
+"<span class='thinbox'>$ " + value.Invoice_Current + 
+				 "</span></li>";
+			});       
+            $('#list').html( output );
+            $('#list').listview( "refresh" );
+
+
+
+
+/*
+
+
+
+
+soon in loop????????
+
+if (value.Invoice_Current > 0) {
+	+ "yoyo"
+	}
+
+
+
+
+
+
+old
+
+$.each(data, function(key, value) {
+console. log ('item', key, value);
+
+
+//output += "<li><a href=\"#\">" + value.Client_ID;  
+//output += " " + value.Contact_First + " " + value.Contact_Last + "</a></li>";
+
+	
+				
+}); 
+
+*/
+      
+            //$('#list').html( output );
+            //$('#list').listview( "refresh" );
+	//window.location.replace("http://www.mydomain.com/new-page.html");
+		
+//after loadup go to cl.......
+//window.location.replace("client-contact-info.html");
+		
+		//
+		//window.location.replace("dashboard.html");
+		
+	});
+		
+//}
+</script>
+
+
+
+<br>
+
+
+
+id - date - total - balance<br>
+
+<div data-role="main" class="ui-content">
+
+
+<span class="print_data_16">
+
+
+
+<ul id="list" data-role="listview">
+</ul>
+
+
+</span>
+
+</div>
+
+
+
+<!--INSERT END --> 
+
+</div>
+<!-- end .box --> 
+
+<!-- end .content --></div>
+</div>
+<!-- /ui-content --> 
+
+</section>
+<!-- /page -->
+
+
+<footer data-role="footer" class="ui-barNAH" data-position="fixed" data-theme="a">
+<div class="ui-grid-c boxblue">
+
+</div>
+</footer>
+<!-- /footer -->
+
+</body>
+</html>

@@ -1,0 +1,1001 @@
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Independent Drivers Consortium Title</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+<link rel="stylesheet" href="inc/jq/themes/theme-02.min.css" />
+<link rel="stylesheet" href="inc/jq/themes/jquery.mobile.icons.min.css" />
+
+<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+ <script>
+	$(function(){
+		$( "[data-role='header'], [data-role='footer']" ).toolbar();
+		});
+    </script><!-- -->
+
+<link href="mob.css" rel="stylesheet" type="text/css" />
+
+
+
+
+<style type="text/css">
+
+.boxbasic1 {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #CCC;
+}
+
+.box33 {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #FCF;
+}
+
+
+.box44 {
+	background-image: url(pics/stripes_teal_bkgrnd.gif);
+	height: 100%;
+	width: 100%;
+}
+.box55 {
+	background-image: url(pics/stripes_teal_bkgrnd.gif);
+	
+}
+
+.tcellwhitelabel {
+	background-color: #F2F2F2;
+}
+
+.tcellwhitetext {
+	background-color: #FFFFFF;
+}
+
+
+
+</style>
+
+<!--background-color: #FFF; -->
+
+
+
+
+
+
+
+
+  
+</head>
+<body>
+
+<div data-role="header" data-position="fixed" data-theme="a">
+
+
+<div class="box1 center1 boxblue" >
+<a href="dashboard.html" rel="external"><img src="pics/appbanner-320x60-home1.png" width="320" height="61" class="center" ></a>
+</div>
+
+  
+<!--<h1>Page head Title</h1> -->
+</div><!-- /header -->
+
+<section id="page01111" data-role="page">
+    
+
+
+<div role="main" class="ui-content">
+<div class="content" >
+<div class="box1 center1" >
+  
+      
+<!--INSERT START -->
+
+
+<!--
+put this with on load??  goget is  -->
+
+<span id = "goget"></span>
+
+<br>
+<script>
+
+if (
+
+localStorage.getItem("Test_ID") > 1 )
+{
+document.getElementById("goget").innerHTML = "got it";
+}else {
+document.getElementById("goget").innerHTML = "get new";
+window.location.replace("get-last-test.html"); 
+ }
+</script>
+
+  <!--<a rel="external" class="buttonlink2" href="dashboard.html">dashboard</a>
+  
+  
+  <div class="vsp20"></div> -->
+  
+  
+<!--
+<a class="buttonlink2" href="get-last-test.html" rel="external"> <span class="bigfont2">get-last-test - TMP</span></a>
+
+<div class="vsp20"></div> -->
+  
+ <!-- 
+  <strong> 
+
+
+<a class="buttonlink2" href="dashboard.php">RETURN to Main Page</a>
+
+</strong> -->
+
+
+<div class="box1">
+
+
+
+
+
+
+
+
+
+
+
+<div class="box1">
+
+
+!!!!!!!!!YO THIS-------- will cycle forever if no test!!!!!!!<br>
+
+FIX THIS
+
+<?php if (FileMaker::isError($record_details_result)  == 401  ) { ?> 
+   <strong><span class="print_data_22"><span class="red1">
+  <?php echo $noresult; ?>
+  </span></span> </strong> 
+  
+  <?php }else{ 
+  ?> 
+
+
+
+
+
+<table width="320" align="center" border="0" cellspacing="3" cellpadding="3" background="pics/bk3999.jpg">
+
+
+
+
+<tr>
+<td colspan="2" align="right" valign="top" class="tcellwhitetext">
+
+
+
+
+<div>
+
+
+<table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
+<tr>
+<td align="center"><a href="dashboard.php"><img src="pics/medlogo1.png" width="75" height="75" border="0" align="middle"></a></td>
+<td>
+
+
+
+
+
+<table border="0" align="right" cellpadding="1" cellspacing="1">
+      <tr>
+        <td align="right" class="textLogo"><strong>INDEPENDENT DRIVER<br>
+CONSORTIUM</strong></td>
+      </tr>
+      <tr>
+        <td align="right" class="print_data">Drug and Alcohol Testing Programs<br>
+to Meet Federal Requirements</td>
+      </tr>
+      <tr>
+        <td align="right" class="print_data">6265 Sepulveda Blvd., #13 </td>
+      </tr>
+      <tr>
+        <td align="right" class="print_data">Van Nuys, CA 91411 </td>
+      </tr>
+      <tr>
+        <td align="right" class="print_data">800-243-7669 | 818-779-1900<br>
+Fax 818-779-1908 </td>
+      </tr>
+      <tr>
+        <td align="right">
+       
+        </td>
+      </tr>
+    </table>
+
+
+
+</td>
+</tr>
+</table>
+
+
+
+
+
+
+
+
+
+
+    
+    
+    </div>
+
+</td>
+</tr>
+
+
+
+
+
+<tr>
+
+<td colspan="2" align="left" valign="top" class="tcellwhitetext" >
+
+
+<span class="print_data_20">
+
+<!-- 
+
+START
+
+<br>
+
+<span id="Client_ID"></span><br>
+FFF - 
+<span id="first"></span><br>
+LLL - 
+<span id="last"></span><br>
+
+t date
+
+
+
+<span id=""></span><br>
+ 
+ 
+ 
+ 
+<span id="Test_Date"></span><br>
+<span id="Test_Collection_Time"></span><br>
+<span id="Date_CCF_Received"></span><br>
+<span id="test_report_date"></span><br>
+<span id="Date_MRO_Spoke_to_worker"></span><br>
+<span id="Speciman_ID_num"></span><br>
+<span id="Test_ID"></span><br>
+<span id="Type"></span><br>
+<span id="Kind"></span><br>
+<span id="Outcome"></span><br>
+<span id="Pos_For_1"></span><br>
+<span id="Pos_For_2"></span><br>
+<span id="Pos_For_3"></span><br>
+<span id="Creatinine"></span><br>
+<span id="Specific_Gravity"></span><br>
+<span id="Speciman_out_of_Compliance"></span><br>
+<span id="tests_labs_Name"></span><br>
+<span id="tests_labs_City"></span><br>
+<span id="tests_labs_State"></span><br>
+<span id="tests_labs_Zip"></span><br>
+<span id="tests_col_Name"></span><br>
+
+<span id="Test_Date"></span><br>
+
+<span id="tests_col_Address"></span><br>
+<span id="tests_col_City"></span><br>
+<span id="tests_col_State"></span><br>
+<span id="tests_col_Zip"></span><br>
+<span id="tests_sap_Name"></span><br>
+<span id="tests_sap_Address"></span><br>
+<span id="tests_sap_Address"></span><br>
+<span id="tests_sap_Address"></span><br>
+<span id="tests_sap_Zip"></span><br>
+<span id="tests_sap_Phone"></span><br>
+
+
+
+<br>
+=======<br><br>
+
+
+
+99999999
+
+
+-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+IDC Member: 
+
+
+
+
+
+
+<span id="Company"></span><br>
+
+
+<!--
+<?php echo $record_details_row->getField('tests_client::Company'); ?>
+ -->
+<br>
+		
+		
+        <br>
+       
+
+<span id="Address"></span>
+
+        
+		
+		<!--<?php echo $record_details_row->getField('tests_client::Address'); ?> -->
+		
+        
+       <br>
+       
+       
+       
+      <span id="City"></span>, <span id="State"></span> <span id="Zip"></span><br>
+
+       
+  <!--     
+
+<?php echo $record_details_row->getField('tests_client::City'); ?>, <?php echo $record_details_row->getField('tests_client::State'); ?> <?php echo $record_details_row->getField('tests_client::Zip'); ?> -->
+		
+</span></td>
+</tr>
+
+
+      <tr>
+        <td valign="bottom" class="tcellwhitelabel"><div align="right">Name:</div></td>
+        <td align="left" valign="bottom" class="tcellwhitetext"  ><strong>
+        
+        
+        
+        
+      
+
+
+ 
+		
+		 <span id="first"></span>
+		<!-- <?php
+echo mb_convert_case($record_details_row->getField('first'),MB_CASE_TITLE,"UTF-8"); ?>  -->
+		 <span id="last"></span>
+		<!-- <?php
+echo mb_convert_case($record_details_row->getField('last'),MB_CASE_TITLE,"UTF-8"); ?>		 -->
+		 </strong></td>
+      </tr>
+      
+      
+   
+      <tr>
+        <td valign="bottom" class="tcellwhitelabel"><div align="right">Drivers Lic. #: </div></td>
+        <td align="left" valign="bottom" class="tcellwhitetext"><strong>
+        
+        
+        <!--
+        <br><br>NO
+        
+        <span id="Client_ID"></span>dupe<br>
+ 
+        <span id="Phone1"></span><br>
+
+<span id="Fax"></span><br>
+<span id="Contact_First"></span><br> FL<br>
+<span id="Contact_Last"></span><br>
+NO
+<br> -->
+        
+
+ <span id="cl_emp_Drivers_License_No"></span>
+
+       <!--  <?php echo $record_details_row->getField('tests_emp::Drivers_License_No'); ?>   
+        -->
+        
+        
+       
+        </strong></td>
+      </tr>
+      
+      
+      
+      
+      
+      
+      <tr>
+        <td valign="bottom" class="tcellwhitelabel"><div align="right">Cellphone #: </div></td>
+        <td align="left" valign="bottom" class="tcellwhitetext"><strong>
+        
+        <span id="Phone2"></span><br>
+    
+    <!--  <?php echo $record_details_row->getField('tests_client::Phone2'); ?>   
+        -->
+        
+       
+        </strong></td>
+      </tr>
+      
+      
+      
+      
+      
+
+
+
+
+
+
+
+<tr>
+<td align="right" valign="bottom" class="tcellwhitetext">&nbsp;</td>
+<td align="left" valign="bottom" class="tcellwhitetext">&nbsp;</td>
+</tr>
+
+
+
+
+
+      <tr>
+        <td align="right" valign="bottom"  class="tcellwhitelabel">IDC Client #: </td>
+        <td align="left" valign="bottom" class="tcellwhitetext" ><strong>
+		<span id="Client_ID"></span>
+		<!--<?php echo $record_details_row->getField('Client_ID'); ?>
+	          -->
+	    </strong></td>
+      </tr>
+      <tr>
+        <td align="right" valign="bottom" class="tcellwhitelabel">Test Collection<br>
+Date/Time: </td>
+        <td align="left" valign="bottom" class="tcellwhitetext"><strong>
+        
+        
+<span id="Test_Date"></span> - 
+<span id="Test_Collection_Time"></span>
+		<!--<?php echo $record_details_row->getField('Test_Date',0); ?> - <?php echo $record_details_row->getField('Test Collection Time'); ?>
+         -->
+        
+            
+        </strong></td>
+      </tr>
+      <tr>
+        <td align="right" valign="bottom" class="tcellwhitelabel">Received MRO<br>
+Copy of CCF:</td>
+        <td align="left" valign="bottom" class="tcellwhitetext"><strong>
+		
+		<span id="Date_CCF_Received"></span>
+
+		<!--
+		<?php echo $record_details_row->getField('Date CCF Received'); ?> -->
+            
+            
+       </strong></td>
+      </tr>
+      <tr>
+        <td align="right" valign="bottom" class="tcellwhitelabel">Test Report Date: </td>
+        <td align="left" valign="bottom" class="tcellwhitetext"><strong>
+		
+		
+		<span id="test_report_date"></span>
+		<!--
+		<?php echo $record_details_row->getField('test report date'); ?>
+         -->   
+        </strong></td>
+      </tr>
+      <tr>
+        <td align="right" valign="bottom" class="tcellwhitelabel">MRO<br>
+ Verified Date: </td>
+        <td align="left" valign="bottom" class="tcellwhitetext"><strong>
+		<span id="Date_MRO_Spoke_to_worker"></span>
+
+<!--
+		<?php echo $record_details_row->getField('Date MRO Spoke to worker'); ?> -->
+            
+        </strong></td>
+      </tr>
+      <tr>
+        <td align="right" valign="bottom" class="tcellwhitelabel">Specimen ID #: </td>
+        <td align="left" valign="bottom" class="tcellwhitetext"><strong>
+		
+		<span id="Speciman_ID_num"></span>
+
+		<!--<?php echo $record_details_row->getField('Speciman ID_num',0); ?> -->
+		
+		
+
+
+	      
+        </strong></td>
+      </tr>
+      <tr>
+        <td align="right" valign="bottom" class="tcellwhitelabel">Test #: </td>
+        <td align="left" valign="bottom" class="tcellwhitetext"><strong>
+		
+		<span id="Test_ID"></span>
+<!--
+<?php echo $record_details_row->getField('Test_ID'); ?>
+   -->          
+        </strong></td>
+      </tr>
+
+
+
+
+
+
+
+
+
+<tr>
+<td align="right" valign="bottom" class="tcellwhitetext">&nbsp;</td>
+<td align="left" valign="bottom" class="tcellwhitetext">&nbsp;</td>
+</tr>
+
+
+
+
+    
+      <tr valign="TOP">
+        <td align="right" valign="bottom" class="tcellwhitelabel" ><div align="right">Location/<br>
+Division #: </div></td>
+        <td align="left" valign="bottom" class="tcellwhitetext" ><strong>
+        
+        
+
+<span id="cl_emp_Division_ID_Num"></span>
+        
+        
+		
+     <!-- <?php echo $record_details_row->getField('tests_emp::Division_ID_Num'); ?> -->
+     </strong></td>
+      </tr>
+      <tr>
+        <td align="right" valign="bottom" class="tcellwhitelabel"><div align="right">Location/<br>
+Division:</div></td>
+      <td align="left" valign="bottom" class="tcellwhitetext"><strong>
+	  <span id="cl_emp_Division_Name"></span>
+	 <!-- <?php echo $record_details_row->getField('tests_emp::Division_Name',0); ?> -->
+     </strong></td>
+      </tr>
+     
+      <tr>
+        <td align="right" valign="bottom" class="tcellwhitelabel"><div align="right">Test Type: </div></td>
+        <td align="left" valign="bottom" class="tcellwhitetext"><strong>
+		<span id="Type"></span>
+
+
+		
+		<!--<?php echo $record_details_row->getField('Type'); ?> -->
+            
+        </strong></td>
+      </tr>
+      <tr>
+        <td align="right" valign="bottom" class="tcellwhitelabel"><div align="right">Test Kind: </div></td>
+        <td align="left" valign="bottom" class="tcellwhitetext"><strong>
+		<span id="Kind"></span>
+
+		<!--<?php echo $record_details_row->getField('Kind'); ?> -->
+            
+        </strong></td>
+      </tr>
+      <tr>
+        <td align="right" valign="bottom" class="tcellwhitelabel"><div align="right">Outcome:
+          
+          
+          
+   
+          
+        </div></td>
+        <td align="left" valign="bottom" class="tcellwhitetext">
+        
+        
+        
+        <span class="print_data_20_b"><strong>
+		
+		<span id="Outcome"></span>
+
+<!--
+<?php echo $record_details_row->getField('Outcome'); ?> -->
+
+</strong></span>
+        
+      </td>
+      </tr>
+      <tr>
+        <td align="right" valign="bottom" class="tcellwhitelabel"><div align="right">Type of Drug:<br>
+          (Positive for)
+ </div></td>
+        <td align="left" valign="bottom" class="tcellwhitetext"><strong><span id="Pos_For_1"></span>
+
+                
+       <!-- <?php echo $record_details_row->getField('Pos For,1'); ?> --><br>
+        <span id="Pos_For_2"></span>
+
+       <!-- <?php echo $record_details_row->getField('Pos For,2'); ?> --><br>
+        <span id="Pos_For_3"></span>
+         
+         
+        <!--<?php echo $record_details_row->getField('Pos For,3'); ?> --><br>	
+        </strong></td>
+      </tr>
+      <tr>
+        <td align="right" valign="bottom" class="tcellwhitelabel"><div align="right">Urine Creatinine<br>
+ Concentration:</div></td>
+      <td align="left" valign="bottom" class="tcellwhitetext"><strong>
+	  <span id="Creatinine"></span>
+
+	  
+	<!--  <?php echo $record_details_row->getField('Creatinine'); ?> -->
+    </strong></td>
+      </tr>
+      <tr>
+        <td align="right" valign="bottom" class="tcellwhitelabel"><div align="right">Specific Gravity:</div></td>
+      <td align="left" valign="bottom" class="tcellwhitetext"><strong>
+	  
+	  <span id="Specific_Gravity"></span>
+
+	  <!--<?php echo $record_details_row->getField('Specific Gravity'); ?> -->
+      </strong></td>
+      </tr>
+      <tr>
+        <td align="right" valign="bottom" class="tcellwhitelabel">
+          <div align="right">Comments:</div></td>
+             <td align="left" valign="bottom" class="tcellwhitetext"><span class="print_fname"><strong>
+			 <span id="Speciman_out_of_Compliance"></span>
+<!--
+<?php echo $record_details_row->getField('Speciman out of Compliance'); ?> -->
+</strong></span> </td>
+        </tr>
+        
+
+
+
+
+
+      
+      
+      <tr>
+        <td align="left" valign="top" class="print_fname"><strong>Laboratory:</strong></td>
+        <td align="left" valign="bottom" class="tcellwhitetext"> 
+         
+         
+         
+         <span id="tests_labs_Name"></span><br>
+
+
+         
+         
+        <!--  <?php echo $record_details_row->getField('tests_labs::Name'); ?> -->
+
+</td>
+      </tr>
+      <tr>
+        <td align="left" valign="top" class="tcellwhitetext">&nbsp;</td>
+        <td align="left" valign="bottom" class="tcellwhitetext">
+        
+        
+        
+        
+        <span id="tests_labs_City"></span><br>
+<span id="tests_labs_State"></span><br>
+<span id="tests_labs_Zip"></span><br>
+
+        
+        
+        <!--<?php echo $record_details_row->getField('tests_labs::City'); ?>, <?php echo $record_details_row->getField('tests_labs::State'); ?> <?php echo $record_details_row->getField('tests_labs::Zip'); ?> -->
+        </td>
+      </tr>
+      <tr>
+        <td align="left" valign="top" class="tcellwhitetext">&nbsp;</td>
+        <td align="left" valign="bottom" class="tcellwhitetext">&nbsp;</td>
+      </tr>
+      <tr>
+        <td align="left" valign="top" class="print_fname"><strong>Collection Site:</strong></td>
+      <td align="left" valign="bottom" class="tcellwhitetext">
+	  <span id="tests_col_Name"></span><br>
+
+	  <!--<?php
+echo mb_convert_case($record_details_row->getField('tests_col::Name'),MB_CASE_TITLE,"UTF-8"); ?> -->
+</td>
+      </tr>
+      <tr>
+        <td align="left" valign="top" class="tcellwhitetext">&nbsp;</td>
+      <td align="left" valign="bottom" class="tcellwhitetext">
+	  
+	  
+	  
+  
+	  
+<span id="tests_col_Address"></span><br>
+	  
+	<!--  <?php
+echo mb_convert_case($record_details_row->getField('tests_col::Address'),MB_CASE_TITLE,"UTF-8"); ?> -->
+</td>
+      </tr>
+      <tr>
+        <td align="left" valign="top" class="tcellwhitetext">&nbsp;</td>
+      <td align="left" valign="bottom" class="tcellwhitetext">
+	  
+	  
+	  
+<span id="tests_col_City"></span><br>
+<span id="tests_col_State"></span><br>
+<span id="tests_col_Zip"></span><br>
+<!--
+<?php echo $record_details_row->getField('tests_col::City'); ?>, <?php echo $record_details_row->getField('tests_col::State'); ?> <?php echo $record_details_row->getField('tests_col::Zip'); ?> -->
+
+</td>
+      </tr>
+      <tr>
+        <td align="left" valign="top" class="tcellwhitetext">&nbsp;</td>
+        <td align="left" valign="bottom" class="tcellwhitetext">&nbsp;</td>
+      </tr>
+      <tr>
+        <td align="left" valign="top" class="print_fname"><strong>SAP Referral: </strong></td>
+        <td align="left" valign="bottom" class="tcellwhitetext">
+		
+		
+	  
+<span id="tests_sap_Name"></span><br>
+
+		
+		
+		<!--<?php
+echo mb_convert_case($record_details_row->getField('tests_sap::Name'),MB_CASE_TITLE,"UTF-8"); ?> -->
+         </td>
+      </tr>
+      
+      
+
+
+
+<tr>
+<td align="right" valign="top" class="tcellwhitetext">&nbsp;</td>
+<td align="left" valign="bottom" class="tcellwhitetext">
+
+ 
+<span id="tests_sap_Address"></span><br>
+<span id="tests_sap_City"></span><br>
+<span id="tests_sap_State"></span><br>
+<span id="tests_sap_Zip"></span><br>
+<span id="tests_sap_Phone"></span><br>
+	
+          <!--<?php echo $record_details_row->getField('tests_sap::Address'); ?><br>
+          <?php echo $record_details_row->getField('tests_sap::City'); ?>, <?php echo $record_details_row->getField('tests_sap::State'); ?> <?php echo $record_details_row->getField('tests_sap::Zip'); ?> <br>
+Phone: <?php echo $record_details_row->getField('tests_sap::Phone'); ?> -->
+
+
+
+</td>
+</tr>
+
+
+<tr>
+<td colspan="2" align="left" valign="top" class="tcellwhitetext">
+
+
+
+
+  <span class="print_fname"><strong>Test Cutoff Levels:</strong></span><br>
+     
+     
+     
+     
+     
+     
+     
+      <table align="center" border="0" cellspacing="1" cellpadding="1" background="pics/bk3.jpg">
+        <tr>
+          <td class="style5"><div align="left">Drugs<br>
+            Tested</div></td>
+          <td class="style5"><div align="right">Initial<br>
+            Test Level</div></td>
+          <td class="style5"><div align="right">Confirm<br>
+            Test Level</div></td>
+        </tr>
+        <tr>
+          <td class="style5 tcellwhitetext" valign="TOP"><div align="left" class="style5">
+          Amphetamines<br>
+            Methamphetamine<br>
+            MDMA<br>
+            Cocaine<br>
+            Marijuana<br>
+            Opiates<br>
+            6-Acetylmorphine <br>
+            PCP<br>
+            </div></td>
+          <td class="style5 tcellwhitetext" valign="TOP"><div align="right" class="style5 ">
+          500 ng/mL<br>
+            500 ng/mL<br>
+            500 ng/mL<br>
+            150 ng/mL<br>
+            50 ng/mL<br>
+            2000ng/mL<br>
+            10 ng/mL<br>
+            25 ng/mL<br>
+            </div></td>
+          <td class="style5 tcellwhitetext" valign="TOP"><div align="right" class="style5 ">
+          250 ng/mL<br>
+            250 ng/mL<br>
+            250 ng/mL<br>
+            100 ng/mL<br>
+            15 ng/mL<br>
+            2000ng/mL<br>
+            10 ng/mL<br>
+            25 ng/mL<br>
+            </div></td>
+        </tr>
+        </table>
+
+
+
+
+
+
+
+
+
+</td>
+</tr>
+
+
+
+
+<tr>
+<td colspan="2" align="center" valign="top" class="tcellwhitetext">
+MRO: 
+
+<img src="pics/mzsig2.png" width="234" height="91" align="top">
+  
+
+</td>
+</tr>
+
+
+
+</table>
+
+
+</div>      
+        
+        
+        
+      
+        
+
+
+<?php 
+} ?>
+
+
+
+
+start JS<br>
+
+
+<SCRIPT LANGUAGE="JavaScript">
+
+document.getElementById('Client_ID').textContent = localStorage.getItem("Client_ID");
+document.getElementById('first').textContent = localStorage.getItem("first");
+document.getElementById('last').textContent = localStorage.getItem("last");
+document.getElementById('Test_Date').textContent = localStorage.getItem("Test_Date");
+document.getElementById('Test_Collection_Time').textContent = localStorage.getItem("Test_Collection_Time");
+document.getElementById('Date_CCF_Received').textContent = localStorage.getItem("Date_CCF_Received");
+document.getElementById('test_report_date').textContent = localStorage.getItem("test_report_date");
+document.getElementById('Date_MRO_Spoke_to_worker').textContent = localStorage.getItem("Date_MRO_Spoke_to_worker");
+document.getElementById('Speciman_ID_num').textContent = localStorage.getItem("Speciman_ID_num");
+document.getElementById('Test_ID').textContent = localStorage.getItem("Test_ID");
+document.getElementById('Type').textContent = localStorage.getItem("Type");
+document.getElementById('Kind').textContent = localStorage.getItem("Kind");
+document.getElementById('Outcome').textContent = localStorage.getItem("Outcome");
+document.getElementById('Pos_For_1').textContent = localStorage.getItem("Pos_For_1");
+document.getElementById('Pos_For_2').textContent = localStorage.getItem("Pos_For_2");
+document.getElementById('Pos_For_3').textContent = localStorage.getItem("Pos_For_3");
+document.getElementById('Creatinine').textContent = localStorage.getItem("Creatinine");
+document.getElementById('Specific_Gravity').textContent = localStorage.getItem("Specific_Gravity");
+document.getElementById('Speciman_out_of_Compliance').textContent = localStorage.getItem("Speciman_out_of_Compliance");
+
+document.getElementById('tests_labs_Name').textContent = localStorage.getItem("tests_labs_Name");
+document.getElementById('tests_labs_City').textContent = localStorage.getItem("tests_labs_City");
+document.getElementById('tests_labs_State').textContent = localStorage.getItem("tests_labs_State");
+document.getElementById('tests_labs_Zip').textContent = localStorage.getItem("tests_labs_Zip");
+
+document.getElementById('tests_col_Name').textContent = localStorage.getItem("tests_col_Name");
+document.getElementById('tests_col_Address').textContent = localStorage.getItem("tests_col_Address");
+document.getElementById('tests_col_City').textContent = localStorage.getItem("tests_col_City");
+document.getElementById('tests_col_State').textContent = localStorage.getItem("tests_col_State");
+document.getElementById('tests_col_Zip').textContent = localStorage.getItem("tests_col_Zip");
+
+document.getElementById('tests_sap_Name').textContent = localStorage.getItem("tests_sap_Name");
+document.getElementById('tests_sap_Address').textContent = localStorage.getItem("tests_sap_Address");
+document.getElementById('tests_sap_City').textContent = localStorage.getItem("tests_sap_City");
+document.getElementById('tests_sap_State').textContent = localStorage.getItem("tests_sap_State");
+document.getElementById('tests_sap_Zip').textContent = localStorage.getItem("tests_sap_Zip");
+
+document.getElementById('tests_sap_Phone').textContent = localStorage.getItem("tests_sap_Phone");
+
+
+//more
+
+document.getElementById('cl_emp_Drivers_License_No').textContent = localStorage.getItem("cl_emp_Drivers_License_No");
+
+
+
+document.getElementById('Client_ID').textContent = localStorage.getItem("Client_ID");
+document.getElementById('Company').textContent = localStorage.getItem("Company");	
+//document.getElementById('Phone1').textContent = localStorage.getItem("Phone1");
+document.getElementById('Phone2').textContent = localStorage.getItem("Phone2");
+
+
+
+//document.getElementById('Fax').textContent = localStorage.getItem("Fax");
+document.getElementById('Address').textContent = localStorage.getItem("Address");
+document.getElementById('City').textContent = localStorage.getItem("City");
+document.getElementById('State').textContent = localStorage.getItem("State");
+document.getElementById('Zip').textContent = localStorage.getItem("Zip");
+
+
+
+
+</script>
+
+
+
+
+<!--INSERT END -->
+
+</div><!-- end .box -->
+</div><!-- end .content -->
+</div><!-- /ui-content -->
+  
+</section><!-- /page -->
+
+<footer data-role="footer" class="ui-barNAH" data-position="fixed" data-theme="a">
+<div class="ui-grid-c boxblue">
+foot
+</div>
+</footer>
+
+
+
+<!-- /footer -->
+
+</body>
+</html>

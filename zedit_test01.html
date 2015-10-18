@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Independent Drivers Consortium Login</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+
+<link rel="stylesheet" href="inc/jq/themes/theme-02.min.css" />
+<link rel="stylesheet" href="inc/jq/themes/jquery.mobile.icons.min.css" />
+
+<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+<script>
+	$(function(){
+		$( "[data-role='header'], [data-role='footer']" ).toolbar();
+		});
+    </script>
+
+<link href="mob.css" rel="stylesheet" type="text/css" />
+
+
+
+  
+</head>
+<body>
+
+
+<div data-role="header" data-position="fixed" data-theme="a">
+<!--add header -->
+
+
+<div class="box1 center1" >
+
+<img src="pics/appbanner-320x60-main.png" width="315" height="60" align="middle" />
+
+</div>
+
+</div>
+
+<!-- /header -->
+
+<section id="page01111" data-role="page">
+
+<div role="main" class="ui-content">
+<div class="content" >
+<div class="box1 center1" >
+  
+      
+<!--INSERT START -->
+
+
+<table align="center" width="315" border="0">
+ <!-- <tr>
+    <td align="center" valign="top">
+       <img src="pics/appbanner-320x60-main.png" width="315" height="60" align="middle" />
+    </td>
+  </tr> -->
+  <tr>
+    <td valign="TOP" background="pics/bk2.jpg">
+      
+    
+    
+<form action=""  method="GET"  name="nowform" id="nowform">
+<!--
+<h2>Enter your information:</h2>
+
+align="center" 
+ --> 
+
+<div  class="box1 center1">
+
+<!--cookie start
+
+
+ -->
+ 
+<br><br>
+
+<a href="index.html">Index</a>
+
+<br>
+
+YO RESULT IS:
+
+done1 is 
+<span id="done1"></span>
+<br><br>
+
+d2 is
+<span id="done2"></span>
+<br><br>
+
+puc is
+<span id="PUC_Number"></span>
+<br><br>
+
+
+
+
+Enter Your Client ID*: <!--(tmp login 45021 pass 123456) --><br> 
+<input name="Client_ID" type="text" class="print_data_22" value="45021" size="15" class="print_data_22" />
+
+<br>
+
+<p>PUC_Number:<br>
+
+<br><br>
+
+
+<input id="PUC_Number" name="PUC_Number" type="text" class="print_data_22" value="" size="15" class="print_data_22" />
+</p>
+
+
+
+<hr />
+
+
+
+<input type="button" class="buttonform2_24" name="submit" value= " - Login - " onClick="testResults(this.form)" />
+
+
+
+
+
+<input type="hidden" name="trylogin" value= "true" >
+</form>
+    
+    
+    
+     </td>
+  </tr>
+</table>
+
+
+
+
+
+
+
+<SCRIPT LANGUAGE="JavaScript">
+function testResults (form) {
+    var Client_ID  = form.Client_ID.value;
+	//var webpass = form.webpass.value;
+	var PUC_Number = form.PUC_Number.value;
+   // alert ("You typed: " + Client_ID +" " +webpass);
+	
+		
+		
+		
+		$.get("http://filemakerbro.com/idc-data/ztestedit01.php?Client_ID="+Client_ID+"&PUC_Number="+PUC_Number, function(data, status){
+
+
+
+
+
+
+// alert("Data: " + data + "\nStatus: " + status);
+console.log ('data', data);
+output = "";
+
+$.each(data, function(key, value) {
+console. log ('item', key, value);
+
+
+//output += "<li><a href=\"#\">" + value.Client_ID;  
+//output += " " + value.Contact_First + " " + value.Contact_Last + "</a></li>";
+
+
+
+//
+localStorage.setItem("done1", value.done1);
+localStorage.setItem("done2", value.done2);
+localStorage.setItem("PUC_Number", value.PUC_Number);
+
+
+
+//document was here
+
+
+//for post php
+//+ 'bbbb'
+
+
+document.getElementById('done1').textContent = localStorage.getItem("done1");
+document.getElementById('done2').textContent = localStorage.getItem("done2");
+document.getElementById('PUC_Number').textContent = localStorage.getItem("PUC_Number");
+
+
+
+
+		
+				
+});       
+            //$('#list').html( output );
+            //$('#list').listview( "refresh" );
+			
+			
+			
+		//window.location.replace("http://www.mydomain.com/new-page.html");
+		
+		//after loadup go to cl.......
+		
+		//window.location.replace("client-contact-info.html");
+		
+		//
+		
+		//window.location.replace("dashboard.html");
+		
+			
+			
+			
+			
+        });
+		
+		
+		
+		
+	
+
+	
+}
+</SCRIPT>
+
+
+
+
+
+
+
+<SCRIPT>
+
+
+// doc here for pre
+
+
+document.getElementById('PUC_Number').textContent = localStorage.getItem("PUC_Number");
+
+
+</SCRIPT>
+
+
+
+
+
+
+
+<!--
+ -->
+
+
+
+
+<script>
+$(document).ready(function(){
+    $("button").click(function(){
+		});
+		
+		//add form
+	
+		
+		
+        //$.get("http://www.inbox.fm/accounts/nortonmedical/api/sandbox/test1.php", function(data, status){
+			//$.get("nm-03.php", function(data, status){
+				
+			//https://idcapp.com/appjs/a2/client.html	
+				
+//https://idcapp.com/idc-data/clientget-11.php
+
+//https://idcapp.com/idc-data/clientget-11.php				
+				
+// hereeeeeeeeee
+    });
+
+</script>
+
+
+
+
+<!--
+
+
+<meta http-equiv="refresh" content="0; url=clientview-01.html">
+
+
+
+<script type="text/javascript">
+   	// Javascript URL redirection
+    window.location.replace("http://www.mydomain.com/new-page.html");
+</script>
+
+
+
+ -->
+
+
+
+<script>
+
+ document.forms['nowform'].elements['PUC_Number'].value = localStorage.getItem("PUC_Number");
+
+</script>
+
+
+
+
+
+
+
+<!--INSERT END -->
+
+</div><!-- end .box -->
+</div><!-- end .content -->
+</div><!-- /ui-content -->
+  
+</section><!-- /page -->
+
+
+
+<!--
+<footer data-role="footer" class="ui-barNAH" data-position="fixed" data-theme="a">
+<div class="ui-grid-c boxblue">
+
+</div>
+</footer> -->
+<!--add footer -->
+<!-- /footer -->
+
+</body>
+</html>

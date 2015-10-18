@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Independent Drivers Consortium Title</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+
+<link rel="stylesheet" href="inc/jq/themes/theme-02.min.css" />
+<link rel="stylesheet" href="inc/jq/themes/jquery.mobile.icons.min.css" />
+
+<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+<script>
+	$(function(){
+		$( "[data-role='header'], [data-role='footer']" ).toolbar();
+		});
+    </script>
+
+<link href="mob.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body>
+
+
+<div data-role="header" data-position="fixed" data-theme="a">
+<!--add header -->
+</div>
+
+<!-- /header -->
+
+<section id="page01111" data-role="page">
+
+<div role="main" class="ui-content">
+<div class="content" >
+<div class="box1 center1" >
+  
+      
+<!--INSERT START -->
+
+<br><br>
+REV - set up php but that all - fix soon...............
+
+
+
+<span id="Client_ID"></span><br>
+FFF - 
+<span id="first"></span><br>
+LLL - 
+<span id="last"></span><br>
+
+t date
+<span id="Test_Date"></span><br>
+<span id="Test_Collection_Time"></span><br>
+<span id="Date_CCF_Received"></span><br>
+<span id="test_report_date"></span><br>
+<span id="Date_MRO_Spoke_to_worker"></span><br>
+<span id="Speciman_ID_num"></span><br>
+<span id="Test_ID"></span><br>
+<span id="Type"></span><br>
+<span id="Kind"></span><br>
+
+
+
+
+<span id="Outcome"></span><br>
+<span id="Pos_For_1"></span><br>
+<span id="Pos_For_2"></span><br>
+<span id="Pos_For_3"></span><br>
+<span id="Creatinine"></span><br>
+<span id="Specific_Gravity"></span><br>
+<span id="Speciman_out_of_Compliance"></span><br>
+<span id="tests_labs_Name"></span><br>
+<span id="tests_labs_City"></span><br>
+<span id="tests_labs_State"></span><br>
+<span id="tests_labs_Zip"></span><br>
+<span id="tests_col_Name"></span><br>
+
+<span id="Test_Date"></span><br>
+
+<span id="tests_col_Address"></span><br>
+<span id="tests_col_City"></span><br>
+<span id="tests_col_State"></span><br>
+<span id="tests_col_Zip"></span><br>
+<span id="tests_sap_Name"></span><br>
+<span id="tests_sap_Address"></span><br>
+<span id="tests_sap_Address"></span><br>
+<span id="tests_sap_Address"></span><br>
+<span id="tests_sap_Zip"></span><br>
+<span id="tests_sap_Phone"></span><br>
+
+
+
+<br>
+=======<br><br>
+
+
+
+<form action="" method="GET" name="nowform" id="nowform">
+<!--
+<h2>Enter your information:</h2>
+
+align="center" 
+ --> 
+
+<div  class="box1 center1">
+
+<!--cookie start
+
+
+ -->
+ 
+
+
+
+
+Enter Your Client ID*: 45021<!--(tmp login 45021 pass 123456) --><br> 
+<input id="Client_ID" name="Client_ID" type="text" class="print_data_22" value="45021" size="15" class="print_data_22" />
+
+<p>Drivers License-PASSWORD*:<br>
+(Your Drivers License Number<br>
+Is Your Password)
+
+<input name="webpass" type="password" class="print_data_22" value="123456" size="15" class="print_data_22" />
+</p>
+
+
+
+
+
+<br>tmpp
+
+
+<input id="PUC_Number" name="PUC_Number" type="text" class="print_data_22" value="" size="15" class="print_data_22" />
+</p>
+<hr />
+
+
+
+<input type="button" class="buttonform2_24" name="submit" value= " - Login - " onClick="testResults(this.form)" />
+
+
+
+
+
+
+
+<input type="hidden" name="trylogin" value= "true" >
+</form>
+
+<br><br>------
+
+
+
+
+
+
+
+
+<SCRIPT LANGUAGE="JavaScript">
+function testResults (form) {
+    var Client_ID  = form.Client_ID.value;
+	var webpass = form.webpass.value;
+   // alert ("You typed: " + Client_ID +" " +webpass);
+	
+	
+	$.get("http://filemakerbro.com/idc-data/last-drug-test.php?Client_ID="+Client_ID+"&webpass="+webpass, function(data, status){
+//$.get("https://idcapp.com/appjs/a2/clientget-11.php", function(data, status){	
+
+// alert("Data: " + data + "\nStatus: " + status);
+console.log ('data', data);
+output = "";
+
+$.each(data, function(key, value) {
+console. log ('item', key, value);
+
+
+//output += "<li><a href=\"#\">" + value.Client_ID;  
+//output += " " + value.Contact_First + " " + value.Contact_Last + "</a></li>";
+
+
+
+//localStorage.setItem("first", value.first + "yum77mm");
+//localStorage.setItem("last", value.last + "yum88mm");
+
+
+
+
+localStorage.setItem('Client_ID', value.Client_ID);
+localStorage.setItem('first', value.first);
+localStorage.setItem('last', value.last);
+localStorage.setItem('Test_Date', value.Test_Date);
+localStorage.setItem('Test_Collection_Time', value.Test_Collection_Time);
+localStorage.setItem('Date_CCF_Received', value.Date_CCF_Received);
+localStorage.setItem('test_report_date', value.test_report_date);
+localStorage.setItem('Date_MRO_Spoke_to_worker', value.Date_MRO_Spoke_to_worker);
+localStorage.setItem('Speciman_ID_num', value.Speciman_ID_num);
+localStorage.setItem('Test_ID', value.Test_ID);
+localStorage.setItem('Type', value.Type);
+localStorage.setItem('Kind', value.Kind);
+localStorage.setItem('Outcome', value.Outcome);
+localStorage.setItem('Pos_For_1', value.Pos_For_1);
+localStorage.setItem('Pos_For_2', value.Pos_For_2);
+localStorage.setItem('Pos_For_3', value.Pos_For_3);
+localStorage.setItem('Creatinine', value.Creatinine);
+localStorage.setItem('Specific_Gravity', value.Specific_Gravity);
+localStorage.setItem('Speciman_out_of_Compliance', value.Speciman_out_of_Compliance);
+
+localStorage.setItem('tests_labs_Name', value.tests_labs_Name);
+localStorage.setItem('tests_labs_City', value.tests_labs_City);
+localStorage.setItem('tests_labs_State', value.tests_labs_State);
+localStorage.setItem('tests_labs_Zip', value.tests_labs_Zip);
+
+localStorage.setItem('tests_col_Name', value.tests_col_Name);
+localStorage.setItem('tests_col_Address', value.tests_col_Address);
+localStorage.setItem('tests_col_City', value.tests_col_City);
+localStorage.setItem('tests_col_State', value.tests_col_State);
+localStorage.setItem('tests_col_Zip', value.tests_col_Zip);
+
+localStorage.setItem('tests_sap_Name', value.tests_sap_Name);
+localStorage.setItem('tests_sap_Address', value.tests_sap_Address);
+localStorage.setItem('tests_sap_City', value.tests_sap_City);
+localStorage.setItem('tests_sap_State', value.tests_sap_State);
+localStorage.setItem('tests_sap_Zip', value.tests_sap_Zip);
+
+localStorage.setItem('tests_sap_Phone', value.tests_sap_Phone);
+
+
+
+
+
+
+
+
+document.getElementById('Client_ID').textContent = localStorage.getItem("Client_ID");
+document.getElementById('first').textContent = localStorage.getItem("first");
+document.getElementById('last').textContent = localStorage.getItem("last");
+document.getElementById('Test_Date').textContent = localStorage.getItem("Test_Date");
+document.getElementById('Test_Collection_Time').textContent = localStorage.getItem("Test_Collection_Time");
+document.getElementById('Date_CCF_Received').textContent = localStorage.getItem("Date_CCF_Received");
+document.getElementById('test_report_date').textContent = localStorage.getItem("test_report_date");
+document.getElementById('Date_MRO_Spoke_to_worker').textContent = localStorage.getItem("Date_MRO_Spoke_to_worker");
+document.getElementById('Speciman_ID_num').textContent = localStorage.getItem("Speciman_ID_num");
+document.getElementById('Test_ID').textContent = localStorage.getItem("Test_ID");
+document.getElementById('Type').textContent = localStorage.getItem("Type");
+document.getElementById('Kind').textContent = localStorage.getItem("Kind");
+document.getElementById('Outcome').textContent = localStorage.getItem("Outcome");
+document.getElementById('Pos_For_1').textContent = localStorage.getItem("Pos_For_1");
+document.getElementById('Pos_For_2').textContent = localStorage.getItem("Pos_For_2");
+document.getElementById('Pos_For_3').textContent = localStorage.getItem("Pos_For_3");
+document.getElementById('Creatinine').textContent = localStorage.getItem("Creatinine");
+document.getElementById('Specific_Gravity').textContent = localStorage.getItem("Specific_Gravity");
+document.getElementById('Speciman_out_of_Compliance').textContent = localStorage.getItem("Speciman_out_of_Compliance");
+
+document.getElementById('tests_labs_Name').textContent = localStorage.getItem("tests_labs_Name");
+document.getElementById('tests_labs_City').textContent = localStorage.getItem("tests_labs_City");
+document.getElementById('tests_labs_State').textContent = localStorage.getItem("tests_labs_State");
+document.getElementById('tests_labs_Zip').textContent = localStorage.getItem("tests_labs_Zip");
+
+document.getElementById('tests_col_Name').textContent = localStorage.getItem("tests_col_Name");
+document.getElementById('tests_col_Address').textContent = localStorage.getItem("tests_col_Address");
+document.getElementById('tests_col_City').textContent = localStorage.getItem("tests_col_City");
+document.getElementById('tests_col_State').textContent = localStorage.getItem("tests_col_State");
+document.getElementById('tests_col_Zip').textContent = localStorage.getItem("tests_col_Zip");
+
+document.getElementById('tests_sap_Name').textContent = localStorage.getItem("tests_sap_Name");
+document.getElementById('tests_sap_Address').textContent = localStorage.getItem("tests_sap_Address");
+document.getElementById('tests_sap_City').textContent = localStorage.getItem("tests_sap_City");
+document.getElementById('tests_sap_State').textContent = localStorage.getItem("tests_sap_State");
+document.getElementById('tests_sap_Zip').textContent = localStorage.getItem("tests_sap_Zip");
+
+document.getElementById('tests_sap_Phone').textContent = localStorage.getItem("tests_sap_Phone");
+
+
+
+
+
+
+
+
+/*
+document.getElementById('first').textContent = localStorage.getItem("first");
+document.getElementById('last').textContent = localStorage.getItem("last");
+*/
+
+/*
+
+document.getElementById('Client_ID').textContent = value.Client_ID;
+document.getElementById('first').textContent = value.first;
+document.getElementById('last').textContent = value.last;
+document.getElementById('Test_Date').textContent = value.Test_Date;
+document.getElementById('Test_Collection_Time').textContent = value.Test_Collection_Time;
+document.getElementById('Date_CCF_Received').textContent = value.Date_CCF_Received;
+document.getElementById('test_report_date').textContent = value.test_report_date;
+document.getElementById('Date_MRO_Spoke_to_worker').textContent = value.Date_MRO_Spoke_to_worker;
+document.getElementById('Speciman_ID_num').textContent = value.Speciman_ID_num;
+document.getElementById('Test_ID').textContent = value.Test_ID;
+document.getElementById('Type').textContent = value.Type;
+document.getElementById('Kind').textContent = value.Kind;
+document.getElementById('Outcome').textContent = value.Outcome;
+document.getElementById('Pos_For_1').textContent = value.Pos_For_1;
+document.getElementById('Pos_For_2').textContent = value.Pos_For_2;
+document.getElementById('Pos_For_3').textContent = value.Pos_For_3;
+document.getElementById('Creatinine').textContent = value.Creatinine;
+document.getElementById('Specific_Gravity').textContent = value.Specific_Gravity;
+document.getElementById('Speciman_out_of_Compliance').textContent = value.Speciman_out_of_Compliance;
+
+document.getElementById('tests_labs_Name').textContent = value.tests_labs_Name;
+document.getElementById('tests_labs_City').textContent = value.tests_labs_City;
+document.getElementById('tests_labs_State').textContent = value.tests_labs_State;
+document.getElementById('tests_labs_Zip').textContent = value.tests_labs_Zip;
+
+document.getElementById('tests_col_Name').textContent = value.tests_col_Name;
+document.getElementById('tests_col_Address').textContent = value.tests_col_Address;
+document.getElementById('tests_col_City').textContent = value.tests_col_City;
+document.getElementById('tests_col_State').textContent = value.tests_col_State;
+document.getElementById('tests_col_Zip').textContent = value.tests_col_Zip;
+
+document.getElementById('tests_sap_Name').textContent = value.tests_sap_Name;
+document.getElementById('tests_sap_Address').textContent = value.tests_sap_Address;
+document.getElementById('tests_sap_City').textContent = value.tests_sap_City;
+document.getElementById('tests_sap_State').textContent = value.tests_sap_State;
+document.getElementById('tests_sap_Zip').textContent = value.tests_sap_Zip;
+
+document.getElementById('tests_sap_Phone').textContent = value.tests_sap_Phone;
+*/
+
+/*
+document.getElementById('xxx').textContent = value.xxx;
+document.getElementById('xxx').textContent = value.xxx;
+document.getElementById('xxx').textContent = value.xxx;
+document.getElementById('xxx').textContent = value.xxx;
+
+document.getElementById('xxx').textContent = value.xxx;
+document.getElementById('xxx').textContent = value.xxx;
+document.getElementById('xxx').textContent = value.xxx;
+document.getElementById('xxx').textContent = value.xxx;
+document.getElementById('xxx').textContent = value.xxx;
+
+document.getElementById('xxx').textContent = value.xxx;
+document.getElementById('xxx').textContent = value.xxx;
+document.getElementById('xxx').textContent = value.xxx;
+document.getElementById('xxx').textContent = value.xxx;
+document.getElementById('xxx').textContent = value.xxx;
+
+document.getElementById('xxx').textContent = value.xxx;
+document.getElementById('xxx').textContent = value.xxx;
+document.getElementById('xxx').textContent = value.xxx;
+document.getElementById('xxx').textContent = value.xxx;
+document.getElementById('xxx').textContent = value.xxx;
+*/
+
+
+
+
+/*
+
+=========
+
+
+
+$output[$key]["Client_ID"] = $record->getField('Client_ID');
+$output[$key]["Test_Date"] = $record->getField('Test_Date');
+$output[$key]["Test_Collection_Time"] = $record->getField('Test Collection Time');
+$output[$key]["Date_CCF_Received"] = $record->getField('Date CCF Received');
+$output[$key]["test_report_date"] = $record->getField('test report date');
+$output[$key]["Date_MRO_Spoke_to_worker"] = $record->getField('Date MRO Spoke to worker');
+$output[$key]["Speciman_ID_num"] = $record->getField('Speciman ID_num');
+$output[$key]["Test_ID"] = $record->getField('Test_ID');
+$output[$key]["Type"] = $record->getField('Type');
+$output[$key]["Kind"] = $record->getField('Kind');
+$output[$key]["Outcome"] = $record->getField('Outcome');
+$output[$key]["Pos_For_1"] = $record->getField('Pos For,1');
+$output[$key]["Pos_For_2"] = $record->getField('Pos For,2');
+$output[$key]["Pos_For_3"] = $record->getField('Pos For,3');
+$output[$key]["Creatinine"] = $record->getField('Creatinine');
+$output[$key]["Specific_Gravity"] = $record->getField('Specific Gravity');
+$output[$key]["Speciman_out_of_Compliance"] = $record->getField('Speciman out of Compliance');
+$output[$key]["tests_labs_Name"] = $record->getField('tests_labs::Name');
+
+//address???????
+
+
+$output[$key]["tests_labs_City"] = $record->getField('tests_labs::City');
+$output[$key]["tests_labs_State"] = $record->getField('tests_labs::State');
+$output[$key]["tests_labs_Zip"] = $record->getField('tests_labs::Zip');
+$output[$key]["tests_col_Name"] = $record->getField('tests_col::Name');
+$output[$key]["tests_col_Address"] = $record->getField('tests_col::Address');
+$output[$key]["tests_col_City"] = $record->getField('tests_col::City');
+$output[$key]["tests_col_State"] = $record->getField('tests_col::State');
+$output[$key]["tests_col_Zip"] = $record->getField('tests_col::Zip');
+$output[$key]["tests_sap_Name"] = $record->getField('tests_sap::Name');
+$output[$key]["tests_sap_Address"] = $record->getField('tests_sap::Address');
+$output[$key]["tests_sap_City"] = $record->getField('tests_sap::City');
+$output[$key]["tests_sap_State"] = $record->getField('tests_sap::State');
+$output[$key]["tests_sap_Zip"] = $record->getField('tests_sap::Zip');
+$output[$key]["tests_sap_Phone"] = $record->getField('tests_sap::Phone');
+
+
+*/
+
+
+
+
+
+
+
+/*
+localStorage.setItem("Contact_First", value.Contact_First + "yummm");
+localStorage.setItem("Contact_Last", value.Contact_Last);
+localStorage.setItem("Client_ID", value.Client_ID);
+localStorage.setItem("Company", value.Company + "yummm22");
+localStorage.setItem("Phone1", value.Phone1);
+localStorage.setItem("Phone2", value.Phone2);
+localStorage.setItem("Fax", value.Fax);
+localStorage.setItem("Address", value.Address);
+localStorage.setItem("City", value.City);
+localStorage.setItem("State", value.State);
+localStorage.setItem("Zip", value.Zip);
+localStorage.setItem("Billing_Company_Name", value.Billing_Company_Name);
+localStorage.setItem("F_Name_Billing", value.F_Name_Billing);
+localStorage.setItem("L_Name_Billing", value.L_Name_Billing);
+localStorage.setItem("Billing_Address", value.Billing_Address);
+localStorage.setItem("Billing_City", value.Billing_City);
+localStorage.setItem("Billing_State", value.State);
+localStorage.setItem("Billing_Zip", value.Billing_Zip);
+localStorage.setItem("Billing_Phone", value.Billing_Phone);
+localStorage.setItem("Billing_Fax", value.Billing_Fax);
+localStorage.setItem("email_Billing_Address", value.email_Billing_Address);
+//localStorage.setItem("email_Billing_Address", 'yo22em');
+localStorage.setItem("cl_emp_First", value.cl_emp_First);
+localStorage.setItem("cl_emp_Last", value.cl_emp_Last);
+
+localStorage.setItem("cl_emp_City_Taxi_Permit_No", value.cl_emp_City_Taxi_Permit_No);
+localStorage.setItem("cl_emp_City_Taxi_Permit_Expiration", value.cl_emp_City_Taxi_Permit_Expiration);
+localStorage.setItem("cl_emp_PUC_Number", value.cl_emp_PUC_Number);
+
+*/
+
+
+/*
+
+document.getElementById('Contact_First').innerHTML = value.Contact_First;
+document.getElementById('Contact_Last').innerHTML = value.Contact_Last;
+document.getElementById('Client_ID').innerHTML = value.Client_ID;
+document.getElementById('Company').innerHTML = value.Company;
+document.getElementById('Phone1').innerHTML = value.Phone1;
+document.getElementById('Phone2').innerHTML = value.Phone2;
+document.getElementById('Fax').innerHTML = value.Fax;
+document.getElementById('Address').innerHTML = value.Address;
+document.getElementById('City').innerHTML = value.City;
+document.getElementById('State').innerHTML = value.State;
+document.getElementById('Zip').innerHTML = value.Zip;
+document.getElementById('Billing_Company_Name').innerHTML = value.Billing_Company_Name;
+document.getElementById('F_Name_Billing').innerHTML = value.F_Name_Billing;
+document.getElementById('L_Name_Billing').innerHTML = value.L_Name_Billing;
+document.getElementById('Billing_Address').innerHTML = value.Billing_Address;
+document.getElementById('Billing_City').innerHTML = value.Billing_City;
+document.getElementById('Billing_State').innerHTML = value.Billing_State;
+document.getElementById('Billing_Zip').innerHTML = value.Billing_Zip;
+document.getElementById('Billing_Phone').innerHTML = value.Billing_Phone;
+document.getElementById('Billing_Fax').innerHTML = value.Billing_Fax;
+
+
+*/		
+				
+});       
+            //$('#list').html( output );
+            //$('#list').listview( "refresh" );
+			
+			
+			
+		//window.location.replace("http://www.mydomain.com/new-page.html");
+		
+		//after loadup go to cl.......
+		
+		//window.location.replace("client-contact-info.html");
+		
+		
+		
+	
+		
+//window.location.replace("dashboard.html");
+		
+			
+        });
+		
+		
+		
+		
+	
+
+	
+}
+</SCRIPT>
+
+
+
+
+
+
+
+
+
+
+
+<!--INSERT END -->
+
+</div><!-- end .box -->
+</div><!-- end .content -->
+</div><!-- /ui-content -->
+  
+</section><!-- /page -->
+
+<footer data-role="footer" class="ui-barNAH" data-position="fixed" data-theme="a">
+<div class="ui-grid-c boxblue">
+<!--add footer -->
+</div>
+</footer>
+
+<!-- /footer -->
+
+</body>
+</html>

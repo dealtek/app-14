@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Independent Drivers Consortium Title</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+
+<link rel="stylesheet" href="inc/jq/themes/theme-02.min.css" />
+<link rel="stylesheet" href="inc/jq/themes/jquery.mobile.icons.min.css" />
+
+<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+<script>
+	$(function(){
+		$( "[data-role='header'], [data-role='footer']" ).toolbar();
+		});
+    </script>
+
+<link href="mob.css" rel="stylesheet" type="text/css" />
+
+  
+</head>
+<body>
+
+
+<div data-role="header" data-position="fixed" data-theme="a">
+<!--add header -->
+</div>
+
+<!-- /header -->
+
+<section id="page01111" data-role="page">
+
+<div role="main" class="ui-content">
+<div class="content" >
+<div class="box1 center1" >
+  
+      
+<!--INSERT START -->
+
+<br><br>
+<div class="widebox1"><div class="dash1"><a rel="external" class="buttonlink2" href="aaa.html">aaa</a></div> </div><br />
+<br />
+
+
+ 
+<h1> <span class="red1"><strong>
+     <!-- where the response will be displayed -->
+<div id='response'></div>
+</strong></span>
+</h1>
+
+
+<form action="" method="post" name="thisform" id="thisform" >
+<input id="test1" name="test1" type="text" value=""  class="print_data_22" />
+<input type="button" class="buttonform2_24" name="submit" value= " - Continue - " onClick="testResults(this.form)" />
+
+</form>
+
+
+
+
+<form action="" method="post" name="thisform2" id="thisform2" >
+<input id="test1" name="test1" type="text" value="22"  class="print_data_22" />
+<input type="button" class="buttonform2_24" name="submit" value= " - Continue - " onClick="testResults(this.form)" />
+
+</form>
+
+<script>
+
+function testResults (form) {
+    //var Client_ID  = form.Client_ID.value;
+	// alert ("You typed: " + Client_ID +" " +webpass);
+
+localStorage.setItem("test1", form.test1.value);
+
+// start post	
+	
+// show that something is loading
+		$('#response').html("<b>Loading response...</b>");
+		
+		/*
+		 * 'post_receiver.php' - where you will pass the form data
+		 * $(this).serialize() - to easily read form data
+		 * function(data){... - data contains the response from post_receiver.php
+		 */
+//client-update-contact.php	- client-update-ztmp.php	 
+$.post('http://filemakerbro.com/idc-data/client-update-ztmp.php', {			 
+Client_ID: localStorage.getItem("Client_ID"),
+test1: localStorage.getItem("test1"),
+		
+}, function(data){
+// show the response
+$('#response').html(data);
+//$('#response2').html(data);
+}).fail(function() {
+// just in case posting your form failed
+alert( "Posting failed." );
+});
+// to prevent refreshing the whole page page
+return false;
+//window.location.replace("new-client-application-register3.html");
+}
+</script>
+
+<script>
+//pre populate
+document.thisform.test1.value=localStorage.getItem("test1");
+
+</script>
+
+
+
+<!--INSERT END -->
+
+</div><!-- end .box -->
+</div><!-- end .content -->
+</div><!-- /ui-content -->
+  
+</section><!-- /page -->
+
+<footer data-role="footer" class="ui-barNAH" data-position="fixed" data-theme="a">
+<div class="ui-grid-c boxblue">
+<!--add footer -->
+</div>
+</footer>
+
+<!-- /footer -->
+
+</body>
+</html>

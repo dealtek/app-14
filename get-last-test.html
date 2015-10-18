@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Independent Drivers Consortium get test</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+<link rel="stylesheet" href="inc/jq/themes/theme-02.min.css" />
+<link rel="stylesheet" href="inc/jq/themes/jquery.mobile.icons.min.css" />
+
+<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+<script>
+	$(function(){
+		$( "[data-role='header'], [data-role='footer']" ).toolbar();
+		});
+    </script>
+
+<link href="mob.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body>
+
+
+<div data-role="header" data-position="fixed" data-theme="a">
+<!--add header -->
+</div>
+
+<!-- /header -->
+
+<section id="page01111" data-role="page">
+
+<div role="main" class="ui-content">
+<div class="content" >
+<div class="box1 center1" >
+  
+      
+<!--INSERT START -->
+
+
+<br><br><br>
+
+
+Please wait while loading last test
+<br><br>
+
+<!--
+!!!!!!!!REV - use this to get and set local then go to test display page
+
+
+
+ -->
+
+
+<SCRIPT LANGUAGE="JavaScript">
+//function testResults (form) {
+	
+
+	
+	
+	
+    //var Client_ID  = form.Client_ID.value;
+	//var webpass = form.webpass.value;
+   // alert ("You typed: " + Client_ID +" " +webpass);
+	
+	
+	// make pass soon
+	
+	var Client_ID  = localStorage.getItem("Client_ID");
+	var webpass = localStorage.getItem("cl_emp_Drivers_License_No");
+	
+	
+	
+	$.get("http://filemakerbro.com/idc-data/last-drug-test.php?Client_ID="+Client_ID+"&webpass="+webpass, function(data, status){
+//$.get("https://idcapp.com/appjs/a2/clientget-11.php", function(data, status){	
+
+// alert("Data: " + data + "\nStatus: " + status);
+console.log ('data', data);
+output = "";
+
+$.each(data, function(key, value) {
+console. log ('item', key, value);
+
+
+
+
+localStorage.setItem('Client_ID', value.Client_ID);
+localStorage.setItem('first', value.first);
+localStorage.setItem('last', value.last);
+
+
+
+localStorage.setItem('Test_Date', value.Test_Date);
+localStorage.setItem('Test_Collection_Time', value.Test_Collection_Time);
+localStorage.setItem('Date_CCF_Received', value.Date_CCF_Received);
+localStorage.setItem('test_report_date', value.test_report_date);
+localStorage.setItem('Date_MRO_Spoke_to_worker', value.Date_MRO_Spoke_to_worker);
+localStorage.setItem('Speciman_ID_num', value.Speciman_ID_num);
+localStorage.setItem('Test_ID', value.Test_ID);
+localStorage.setItem('Type', value.Type);
+localStorage.setItem('Kind', value.Kind);
+localStorage.setItem('Outcome', value.Outcome);
+localStorage.setItem('Pos_For_1', value.Pos_For_1);
+localStorage.setItem('Pos_For_2', value.Pos_For_2);
+localStorage.setItem('Pos_For_3', value.Pos_For_3);
+localStorage.setItem('Creatinine', value.Creatinine);
+localStorage.setItem('Specific_Gravity', value.Specific_Gravity);
+localStorage.setItem('Speciman_out_of_Compliance', value.Speciman_out_of_Compliance);
+
+localStorage.setItem('tests_labs_Name', value.tests_labs_Name);
+localStorage.setItem('tests_labs_City', value.tests_labs_City);
+localStorage.setItem('tests_labs_State', value.tests_labs_State);
+localStorage.setItem('tests_labs_Zip', value.tests_labs_Zip);
+
+localStorage.setItem('tests_col_Name', value.tests_col_Name);
+localStorage.setItem('tests_col_Address', value.tests_col_Address);
+localStorage.setItem('tests_col_City', value.tests_col_City);
+localStorage.setItem('tests_col_State', value.tests_col_State);
+localStorage.setItem('tests_col_Zip', value.tests_col_Zip);
+
+localStorage.setItem('tests_sap_Name', value.tests_sap_Name);
+localStorage.setItem('tests_sap_Address', value.tests_sap_Address);
+localStorage.setItem('tests_sap_City', value.tests_sap_City);
+localStorage.setItem('tests_sap_State', value.tests_sap_State);
+localStorage.setItem('tests_sap_Zip', value.tests_sap_Zip);
+
+localStorage.setItem('tests_sap_Phone', value.tests_sap_Phone);
+
+
+
+
+}
+
+
+
+
+
+
+
+);       
+            
+			
+	
+
+window.location.replace("test-results.html");
+
+
+
+		
+			
+        }
+		
+		
+		
+		
+
+		
+		
+		
+		);
+		
+		
+		
+		
+	
+
+	
+//} form?
+</SCRIPT>
+
+
+
+
+
+
+
+
+
+
+
+<!--INSERT END -->
+
+</div><!-- end .box -->
+</div><!-- end .content -->
+</div><!-- /ui-content -->
+  
+</section><!-- /page -->
+
+<footer data-role="footer" class="ui-barNAH" data-position="fixed" data-theme="a">
+<div class="ui-grid-c boxblue">
+<!--add footer -->
+</div>
+</footer>
+
+<!-- /footer -->
+
+</body>
+</html>

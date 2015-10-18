@@ -1,0 +1,375 @@
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Independent Drivers Consortium - Reg 1</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+
+
+<!--
+
+jqm clash and stops submit
+
+
+YO maybe 2 JS???????????? with valid???????
+ -->
+
+<link rel="stylesheet" href="inc/jq/themes/theme-02.min.css" />
+<link rel="stylesheet" href="inc/jq/themes/jquery.mobile.icons.min.css" />
+
+<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+ <script>
+	$(function(){
+		$( "[data-role='header'], [data-role='footer']" ).toolbar();
+		});
+    </script>
+
+<link href="mob.css" rel="stylesheet" type="text/css" />
+
+
+
+
+
+<style type="text/css" xml:space="preserve">
+BODY, P,TD{ font-family: Arial,Verdana,Helvetica, sans-serif; font-size: 10pt }
+A{font-family: Arial,Verdana,Helvetica, sans-serif;}
+B {	font-family : Arial, Helvetica, sans-serif;	font-size : 12px;	font-weight : bold;}
+.error_strings{ font-family:Verdana; font-size:14px; color:#F00; }
+</style><script language="JavaScript" src="../admin/inc/gen_validatorv4.js"
+type="text/javascript" xml:space="preserve"></script>
+
+
+
+<style type="text/css">
+
+input999
+{
+	-moz-border-radius: 11px;
+	border-radius: 11px;
+	border: 1px solid #CCC;
+	padding: .2em;
+ 	margin: .2em 0;
+	
+}
+
+.label_16g999 {
+	color: #999999;
+	font-size: 16px;
+}
+
+.big24999 {
+	font-family: Arial, Helvetica, sans-serif;
+	color: #FFF;
+	background-color: #6290ee;
+	font-size: 24px;
+}
+
+</style>
+
+
+  
+</head>
+<body>
+
+<div data-role="header" data-position="fixed" data-theme="a">
+
+
+
+<div class="box1 center1 boxblue" >
+<a href="dashboard.html" rel="external"><img src="pics/appbanner-320x60-home1.png" width="320" height="61" class="center" ></a>
+</div>
+
+
+
+<!--<h1>Page head Title</h1> -->
+</div><!-- /header -->
+
+<section id="page01111" data-role="page">
+    
+<!--	
+<div class="box1 center1" >this box fill all<br><br>
+<br>
+</div> 
+-->
+
+<div role="main" class="ui-content">
+<div class="content" >
+<div class="box1 center1" >
+  
+      
+<!--INSERT START -->
+
+<a rel="external" href="client-update.html" class="buttonlink2 center1">Back to Update Index</a> <br>
+  
+<!--
+<form action="new-client-application-register2_newrec.php" method="post" name="thisform" id="thisform" > -->
+
+<form action="" method="post" name="thisform" id="thisform" >
+
+
+
+
+<table border="0" align="center" cellpadding="2" cellspacing="2">
+  <tr>
+    <td>
+   
+    
+     <h1> <span class="red1"> <strong>
+	nameeeeeeeee
+     
+     </strong></span>
+     
+     <br><br>
+     
+     sssssssss
+          
+     
+ </h1>
+    
+    
+    
+    
+    </td>
+  </tr>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+<tr align="left" valign="top">
+     <td align="left"><span class="label_18g">
+       <span class="red2">*</span> CA PUC Number: (optional)<br /></span>
+       <div id='thisform_email_errorloc' class="error_strings"></div>
+       <span class="print_data_22">
+       <input id="cl_emp_PUC_Number" name="cl_emp_PUC_Number" type="text" value=""  class="print_data_22" />
+        
+ </span></td>
+ 
+  </tr>  
+ 
+ 
+ 
+ 
+   <tr>
+    <td align="left" valign="top">
+      
+<!--      <input name="new_submit" type="submit" class="buttonform2_24" value="- Continue -" />   
+ -->      
+      
+
+<input type="button" class="buttonform2_24" name="submit" value= " - Continue - " onClick="testResults(this.form)" />
+
+
+      
+      
+      
+      
+      
+       </td>
+    </tr>
+  
+  
+  
+  <tr>
+    <td>
+    
+    
+   
+    <!--HIDDEN -->
+      
+    <!--  no need now but maybe later -->
+      
+      <input name="optmailinv" type="hidden" value="" />
+      
+      <input name="password" type="hidden" value="" />
+      
+      
+  
+      
+      
+      <input name="expdate" type="hidden" value="next year" />
+      
+      
+      <input name="tocnum" type="hidden" value="toccccc" />
+      
+      
+    
+      
+      <!-- don't need certfeesignup? YES WE DO FOR CARD-->
+      
+      <input name="certfeesignup" type="hidden" value="amtttt" />
+      
+      <input name="datetoday" type="hidden" value="todyyyyyy" />
+      
+      <input name="zweb_nopay" type="hidden" value="1" />  
+     
+  <input name="password" type="hidden" value="111">
+      
+</td>
+  </tr>
+  
+</table>
+
+
+</form>
+
+
+
+<script language="JavaScript" type="text/javascript"
+    xml:space="preserve">//<![CDATA[
+//You should create the validator only after the definition of the HTML form
+  var frmvalidator  = new Validator("thisform");
+    frmvalidator.EnableOnPageErrorDisplay();
+    frmvalidator.EnableMsgsTogether();
+
+    frmvalidator.addValidation("firstname","req","Please enter your First Name");
+    frmvalidator.addValidation("firstname","maxlen=30",	"Max length for FirstName is 30");
+	
+	frmvalidator.addValidation("lastname","req","Please enter your Last Name");
+    frmvalidator.addValidation("lastname","maxlen=30",	"Max length for Last Name is 30");
+	
+	
+	
+	
+	
+
+	frmvalidator.addValidation("cellphone","req","Please enter your cellphone");
+    frmvalidator.addValidation("cellphone","maxlen=20", "Max length for cellphone is 20");
+
+	frmvalidator.addValidation("driverslicense","req","Please enter your drivers license");
+    frmvalidator.addValidation("driverslicense","maxlen=20", "Max length for drivers license is 20");
+
+	
+	 
+	 frmvalidator.addValidation("socialsecnum","req","Please enter your social security number");
+    frmvalidator.addValidation("socialsecnum","maxlen=12", "Max length for social security number is 12");
+
+
+//]]></script>
+
+<!--frmvalidator.addValidation("email","req","Please enter your Email Address"); -->
+
+
+
+
+
+
+
+
+
+
+<script>
+
+function testResults (form) {
+    //var Client_ID  = form.Client_ID.value;
+	//var webpass = form.webpass.value;
+	//var PUC_Number = form.PUC_Number.value;
+   // alert ("You typed: " + Client_ID +" " +webpass);
+	
+
+/*
+document.thisform.cl_emp_First.value=localStorage.getItem("cl_emp_First");
+document.thisform.cl_emp_Last.value=localStorage.getItem("cl_emp_Last");
+
+document.thisform.cl_emp_PUC_Number.value=localStorage.getItem("cl_emp_PUC_Number");
+document.thisform.cl_emp_Notify_PhoneText.value=localStorage.getItem("cl_emp_Notify_PhoneText");
+document.thisform.cl_emp_Notify_Email.value=localStorage.getItem("cl_emp_Notify_Email");
+document.thisform.cl_emp_Social_Security.value=localStorage.getItem("cl_emp_Social_Security");
+document.thisform.cl_emp_Drivers_License_No.value=localStorage.getItem("cl_emp_Drivers_License_No");
+*/
+
+
+/*	
+localStorage.setItem("done1", "YO12221");
+localStorage.setItem("cl_emp_First", form.cl_emp_First.value);
+
+localStorage.setItem("cl_emp_Last", form.cl_emp_Last.value);
+localStorage.setItem("cl_emp_Social_Security", form.cl_emp_Social_Security.value);
+localStorage.setItem("cl_emp_Notify_PhoneText", form.cl_emp_Notify_PhoneText.value);
+localStorage.setItem("cl_emp_Drivers_License_No", form.cl_emp_Drivers_License_No.value);
+localStorage.setItem("cl_emp_Notify_Email", form.cl_emp_Notify_Email.value);
+*/
+
+localStorage.setItem("cl_emp_PUC_Number", form.cl_emp_PUC_Number.value);
+
+
+//window.location.replace("new-client-application-register3.html");
+		
+			
+	
+}
+</script>
+
+
+
+
+
+<script>
+//pre populate
+
+/*
+
+document.thisform.cl_emp_First.value=localStorage.getItem("cl_emp_First");
+document.thisform.cl_emp_Last.value=localStorage.getItem("cl_emp_Last");
+
+document.thisform.cl_emp_PUC_Number.value=localStorage.getItem("cl_emp_PUC_Number");
+document.thisform.cl_emp_Notify_PhoneText.value=localStorage.getItem("cl_emp_Notify_PhoneText");
+document.thisform.cl_emp_Notify_Email.value=localStorage.getItem("cl_emp_Notify_Email");
+document.thisform.cl_emp_Social_Security.value=localStorage.getItem("cl_emp_Social_Security");
+
+*/
+
+document.thisform.cl_emp_PUC_Number.value=localStorage.getItem("cl_emp_PUC_Number");
+
+/*
+
+document.thisform.xxx.value=localStorage.getItem("xxx");
+document.thisform.xxx.value=localStorage.getItem("xxx");
+document.thisform.xxx.value=localStorage.getItem("xxx");
+document.thisform.xxx.value=localStorage.getItem("xxx");
+document.thisform.xxx.value=localStorage.getItem("xxx");
+
+*/
+
+
+</script>
+
+
+
+
+
+
+
+
+<br>
+
+<!--INSERT END -->
+
+</div><!-- end .box -->
+</div><!-- end .content -->
+</div><!-- /ui-content -->
+  
+</section><!-- /page -->
+<!--
+<footer data-role="footer" class="ui-barNAH" data-position="fixed" data-theme="a">
+<div class="ui-grid-c boxblue">
+foot
+</div>
+</footer> -->
+
+<!-- /footer -->
+
+</body>
+</html>
